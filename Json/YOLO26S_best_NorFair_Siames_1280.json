@@ -1,0 +1,58 @@
+{
+  "nome_teste": "YOLO26S_best_NorFair_Siames_1280",
+  "detector": "yolo",
+  "modelo_usado": "yolo26s_best.pt",
+  "tracker": "norfair",
+  "aparencia": "siames",
+  "rtdetr_bola": false,
+  "modelo_bola_usado": "rtdetr-l.pt",
+  "imgsz_config": 1280,
+  "imgsz": 1280,
+  "fps_processamento": 1.380751767624593,
+  "media_cobertura": 1.0,
+  "media_presenca": 0.9986666666666665,
+  "total_trocas_tracker_id": 11,
+  "frames_por_troca_global": 68.18181818181819,
+  "trocas_por_1000_frames_global": 14.666666666666666,
+  "por_grupo": {
+    "time0": {
+      "jogadores": 10,
+      "cobertura_media": 1.0,
+      "presenca_media": 0.9986666666666666,
+      "trocas": 5,
+      "frames_vistos": 7490
+    },
+    "time1": {
+      "jogadores": 10,
+      "cobertura_media": 1.0,
+      "presenca_media": 0.9986666666666666,
+      "trocas": 6,
+      "frames_vistos": 7490
+    }
+  },
+  "bola": {
+    "frames_vistos_bola": 418,
+    "presenca_bola": 0.5573,
+    "num_perdas_bola": 36,
+    "maior_falha_frames": 50,
+    "confianca_media_bola": 0.6736
+  },
+  "diagnostico": {
+    "frames_com_jogadores": 749,
+    "frames_com_bola": 418,
+    "deteccoes_jogadores": 15266,
+    "deteccoes_bola": 423,
+    "novos_tracks": 20,
+    "novos_tracks_classificados": 122,
+    "tempo_deteccao_jogadores": 225.54339120002987,
+    "tempo_deteccao_bola": 222.38418010006353,
+    "tempo_aparencia": 28.759360999967612,
+    "tempo_associacao": 45.423942000048555,
+    "tempo_total_loop": 540.2486843999686
+  },
+  "confiabilidade_time": {
+    "margem_media_geral": 0.1202,
+    "taxa_confirmacao_media": 0.9957,
+    "taxa_divergencia_media": 0.0395
+  }
+}

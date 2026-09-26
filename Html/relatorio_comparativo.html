@@ -1,0 +1,696 @@
+<!doctype html><html><head><meta charset='utf-8'><title>Comparação de Tracking</title>
+<style>
+body{font-family:Arial;margin:24px;background:#f9f9f9}
+h1{color:#2e91ca}
+table{border-collapse:collapse;width:100%;background:white}
+th,td{border:1px solid #bbb;padding:8px;text-align:center}
+th{background:#2e91ca;color:white}
+pre{text-align:left;white-space:pre-wrap;background:#1e1e1e;color:#d4d4d4;padding:12px}
+button{background:#2e91ca;color:white;border:0;padding:5px 10px;border-radius:4px;cursor:pointer}
+button:hover{background:#1a6fa0}
+</style>
+<script>
+function toggle(id){let x=document.getElementById(id);x.style.display=x.style.display==='table-row'?'none':'table-row';}
+</script>
+</head><body>
+<h1>Comparação de Tracking — Soccer</h1>
+<table>
+<tr>
+  <th>Teste</th><th>Vídeo</th><th>Detector</th><th>Tracker</th><th>Modelo</th><th>Aparência</th>
+  <th>FPS</th><th>Cobertura</th><th>Trocas ID</th><th>Frames/Troca</th><th>Presença Bola</th><th>Detalhes</th>
+</tr>
+<tr><td><b>YOLO_CPU_HSV</b></td><td colspan='10' style='color:red'>ERRO: list indices must be integers or slices, not str</td></tr><tr id='det_0' style='display:none'><td colspan='12'><pre>{
+  &quot;nome_teste&quot;: &quot;YOLO_CPU_HSV&quot;,
+  &quot;erro&quot;: &quot;list indices must be integers or slices, not str&quot;,
+  &quot;detector&quot;: &quot;yolo&quot;,
+  &quot;opcao_aparencia&quot;: &quot;hsv&quot;
+}</pre></td></tr><tr><td><b>YOLO_CPU_SEM_APARENCIA</b></td><td>Bundesliga_Video_2.mp4</td><td>yolo</td><td></td><td>yolo26s.pt</td><td></td><td>8.61</td><td>0.00%</td><td>55</td><td>—</td><td>0.0%</td><td><button onclick="toggle('det_1')">Detalhes</button></td></tr><tr id='det_1' style='display:none'><td colspan='12'><pre>{
+  &quot;nome_teste&quot;: &quot;YOLO_CPU_SEM_APARENCIA&quot;,
+  &quot;video&quot;: &quot;Bundesliga_Video_2.mp4&quot;,
+  &quot;detector&quot;: &quot;yolo&quot;,
+  &quot;modelo_usado&quot;: &quot;yolo26s.pt&quot;,
+  &quot;opcao_aparencia&quot;: &quot;none&quot;,
+  &quot;imgsz&quot;: 640,
+  &quot;fps_processamento&quot;: 8.605635165521232,
+  &quot;media_cobertura_no_periodo&quot;: 0.9619235781103009,
+  &quot;media_presenca_no_video&quot;: 0.9319999999999999,
+  &quot;total_trocas_tracker_id&quot;: 55
+}</pre></td></tr><tr><td><b>YOLO_CPU_EMBEDDINGS</b></td><td colspan='10' style='color:red'>ERRO: list indices must be integers or slices, not str</td></tr><tr id='det_2' style='display:none'><td colspan='12'><pre>{
+  &quot;nome_teste&quot;: &quot;YOLO_CPU_EMBEDDINGS&quot;,
+  &quot;erro&quot;: &quot;list indices must be integers or slices, not str&quot;,
+  &quot;detector&quot;: &quot;yolo&quot;,
+  &quot;opcao_aparencia&quot;: &quot;embeddings&quot;
+}</pre></td></tr><tr><td><b>YOLO_CPU_HSV_AUTO</b></td><td>Bundesliga_Video_2.mp4</td><td>yolo</td><td></td><td>yolo26s.pt</td><td></td><td>2.87</td><td>0.00%</td><td>116</td><td>—</td><td>0.0%</td><td><button onclick="toggle('det_3')">Detalhes</button></td></tr><tr id='det_3' style='display:none'><td colspan='12'><pre>{
+  &quot;nome_teste&quot;: &quot;YOLO_CPU_HSV_AUTO&quot;,
+  &quot;video&quot;: &quot;Bundesliga_Video_2.mp4&quot;,
+  &quot;detector&quot;: &quot;yolo&quot;,
+  &quot;modelo_usado&quot;: &quot;yolo26s.pt&quot;,
+  &quot;opcao_aparencia&quot;: &quot;hsv&quot;,
+  &quot;imgsz&quot;: &quot;auto&quot;,
+  &quot;fps_processamento&quot;: 2.871296925346469,
+  &quot;media_cobertura_no_periodo&quot;: 1.0,
+  &quot;media_presenca_no_video&quot;: 0.9985925925925925,
+  &quot;total_trocas_tracker_id&quot;: 116
+}</pre></td></tr><tr><td><b>YOLO26S_COCO_HSV_AUTO</b></td><td>Bundesliga_Video_2.mp4</td><td>yolo</td><td></td><td>yolo26s.pt</td><td></td><td>3.13</td><td>100.00%</td><td>121</td><td>—</td><td>0.0%</td><td><button onclick="toggle('det_4')">Detalhes</button></td></tr><tr id='det_4' style='display:none'><td colspan='12'><pre>{
+  &quot;nome_teste&quot;: &quot;YOLO26S_COCO_HSV_AUTO&quot;,
+  &quot;video&quot;: &quot;Bundesliga_Video_2.mp4&quot;,
+  &quot;detector&quot;: &quot;yolo&quot;,
+  &quot;modelo_usado&quot;: &quot;yolo26s.pt&quot;,
+  &quot;opcao_aparencia&quot;: &quot;hsv&quot;,
+  &quot;imgsz&quot;: &quot;auto&quot;,
+  &quot;fps_processamento&quot;: 3.13,
+  &quot;media_cobertura&quot;: 1.0,
+  &quot;media_presenca&quot;: 0.9985,
+  &quot;total_trocas_tracker_id&quot;: 121
+}</pre></td></tr><tr><td><b>YOLO26S_COCO_HSV_640</b></td><td>Bundesliga_Video_2.mp4</td><td>yolo</td><td></td><td>yolo26s.pt</td><td></td><td>9.72</td><td>94.11%</td><td>47</td><td>—</td><td>0.0%</td><td><button onclick="toggle('det_5')">Detalhes</button></td></tr><tr id='det_5' style='display:none'><td colspan='12'><pre>{
+  &quot;nome_teste&quot;: &quot;YOLO26S_COCO_HSV_640&quot;,
+  &quot;video&quot;: &quot;Bundesliga_Video_2.mp4&quot;,
+  &quot;detector&quot;: &quot;yolo&quot;,
+  &quot;modelo_usado&quot;: &quot;yolo26s.pt&quot;,
+  &quot;opcao_aparencia&quot;: &quot;hsv&quot;,
+  &quot;imgsz&quot;: 640,
+  &quot;fps_processamento&quot;: 9.72,
+  &quot;media_cobertura&quot;: 0.9411,
+  &quot;media_presenca&quot;: 0.904,
+  &quot;total_trocas_tracker_id&quot;: 47
+}</pre></td></tr><tr><td><b>YOLO26S_COCO_SEM_APARENCIA_640</b></td><td>Bundesliga_Video_2.mp4</td><td>yolo</td><td></td><td>yolo26s.pt</td><td></td><td>10.07</td><td>94.11%</td><td>47</td><td>—</td><td>0.0%</td><td><button onclick="toggle('det_6')">Detalhes</button></td></tr><tr id='det_6' style='display:none'><td colspan='12'><pre>{
+  &quot;nome_teste&quot;: &quot;YOLO26S_COCO_SEM_APARENCIA_640&quot;,
+  &quot;video&quot;: &quot;Bundesliga_Video_2.mp4&quot;,
+  &quot;detector&quot;: &quot;yolo&quot;,
+  &quot;modelo_usado&quot;: &quot;yolo26s.pt&quot;,
+  &quot;opcao_aparencia&quot;: &quot;none&quot;,
+  &quot;imgsz&quot;: 640,
+  &quot;fps_processamento&quot;: 10.07,
+  &quot;media_cobertura&quot;: 0.9411,
+  &quot;media_presenca&quot;: 0.904,
+  &quot;total_trocas_tracker_id&quot;: 47
+}</pre></td></tr><tr><td><b>YOLO26S_COCO_EMBEDDINGS_AUTO</b></td><td colspan='10' style='color:red'>ERRO: shapes (768,) and (34,) not aligned: 768 (dim 0) != 34 (dim 0)</td></tr><tr id='det_7' style='display:none'><td colspan='12'><pre>{
+  &quot;nome_teste&quot;: &quot;YOLO26S_COCO_EMBEDDINGS_AUTO&quot;,
+  &quot;erro&quot;: &quot;shapes (768,) and (34,) not aligned: 768 (dim 0) != 34 (dim 0)&quot;,
+  &quot;detector&quot;: &quot;yolo&quot;,
+  &quot;video&quot;: &quot;Bundesliga_Video_2.mp4&quot;
+}</pre></td></tr><tr><td><b>YOLO26M_COCO_HSV_AUTO</b></td><td>Bundesliga_Video_2.mp4</td><td>yolo</td><td>bytetrack</td><td>yolo26m.pt</td><td></td><td>1.26</td><td>0.00%</td><td>16</td><td>—</td><td>92.7%</td><td><button onclick="toggle('det_8')">Detalhes</button></td></tr><tr id='det_8' style='display:none'><td colspan='12'><pre>{
+  &quot;nome_teste&quot;: &quot;YOLO26M_COCO_HSV_AUTO&quot;,
+  &quot;video&quot;: &quot;Bundesliga_Video_2.mp4&quot;,
+  &quot;detector&quot;: &quot;yolo&quot;,
+  &quot;modelo_usado&quot;: &quot;yolo26m.pt&quot;,
+  &quot;tracker&quot;: &quot;bytetrack&quot;,
+  &quot;opcao_aparencia&quot;: &quot;hsv&quot;,
+  &quot;imgsz&quot;: &quot;auto&quot;,
+  &quot;fps_processamento&quot;: 1.26,
+  &quot;media_cobertura_geral&quot;: 0.9863,
+  &quot;total_trocas_tracker_id&quot;: 16,
+  &quot;por_grupo&quot;: {
+    &quot;time0&quot;: {
+      &quot;jogadores&quot;: 10,
+      &quot;media_cobertura&quot;: 0.9829,
+      &quot;trocas&quot;: 12
+    },
+    &quot;time1&quot;: {
+      &quot;jogadores&quot;: 9,
+      &quot;media_cobertura&quot;: 0.9875,
+      &quot;trocas&quot;: 4
+    },
+    &quot;goleiro_time1&quot;: {
+      &quot;jogadores&quot;: 1,
+      &quot;media_cobertura&quot;: 0.9986,
+      &quot;trocas&quot;: 0
+    },
+    &quot;arbitro&quot;: {
+      &quot;jogadores&quot;: 1,
+      &quot;media_cobertura&quot;: 0.996,
+      &quot;trocas&quot;: 0
+    }
+  },
+  &quot;bola&quot;: {
+    &quot;frames_vistos_bola&quot;: 695,
+    &quot;presenca_bola&quot;: 0.9267,
+    &quot;num_perdas_bola&quot;: 23,
+    &quot;maior_falha_frames&quot;: 7
+  }
+}</pre></td></tr><tr><td><b>YOLO26M_COCO_HSV_640</b></td><td>Bundesliga_Video_2.mp4</td><td>yolo</td><td>bytetrack</td><td>yolo26m.pt</td><td></td><td>4.03</td><td>0.00%</td><td>35</td><td>—</td><td>59.1%</td><td><button onclick="toggle('det_9')">Detalhes</button></td></tr><tr id='det_9' style='display:none'><td colspan='12'><pre>{
+  &quot;nome_teste&quot;: &quot;YOLO26M_COCO_HSV_640&quot;,
+  &quot;video&quot;: &quot;Bundesliga_Video_2.mp4&quot;,
+  &quot;detector&quot;: &quot;yolo&quot;,
+  &quot;modelo_usado&quot;: &quot;yolo26m.pt&quot;,
+  &quot;tracker&quot;: &quot;bytetrack&quot;,
+  &quot;opcao_aparencia&quot;: &quot;hsv&quot;,
+  &quot;imgsz&quot;: 640,
+  &quot;fps_processamento&quot;: 4.03,
+  &quot;media_cobertura_geral&quot;: 0.9346,
+  &quot;total_trocas_tracker_id&quot;: 35,
+  &quot;por_grupo&quot;: {
+    &quot;time0&quot;: {
+      &quot;jogadores&quot;: 10,
+      &quot;media_cobertura&quot;: 0.9419,
+      &quot;trocas&quot;: 20
+    },
+    &quot;time1&quot;: {
+      &quot;jogadores&quot;: 9,
+      &quot;media_cobertura&quot;: 0.9437,
+      &quot;trocas&quot;: 12
+    },
+    &quot;goleiro_time1&quot;: {
+      &quot;jogadores&quot;: 1,
+      &quot;media_cobertura&quot;: 0.745,
+      &quot;trocas&quot;: 1
+    },
+    &quot;arbitro&quot;: {
+      &quot;jogadores&quot;: 1,
+      &quot;media_cobertura&quot;: 0.969,
+      &quot;trocas&quot;: 2
+    }
+  },
+  &quot;bola&quot;: {
+    &quot;frames_vistos_bola&quot;: 443,
+    &quot;presenca_bola&quot;: 0.5907,
+    &quot;num_perdas_bola&quot;: 65,
+    &quot;maior_falha_frames&quot;: 36
+  }
+}</pre></td></tr><tr><td><b>YOLO26M_COCO_SEM_APARENCIA_640</b></td><td>Bundesliga_Video_2.mp4</td><td>yolo</td><td>bytetrack</td><td>yolo26m.pt</td><td></td><td>3.85</td><td>0.00%</td><td>35</td><td>—</td><td>59.1%</td><td><button onclick="toggle('det_10')">Detalhes</button></td></tr><tr id='det_10' style='display:none'><td colspan='12'><pre>{
+  &quot;nome_teste&quot;: &quot;YOLO26M_COCO_SEM_APARENCIA_640&quot;,
+  &quot;video&quot;: &quot;Bundesliga_Video_2.mp4&quot;,
+  &quot;detector&quot;: &quot;yolo&quot;,
+  &quot;modelo_usado&quot;: &quot;yolo26m.pt&quot;,
+  &quot;tracker&quot;: &quot;bytetrack&quot;,
+  &quot;opcao_aparencia&quot;: &quot;none&quot;,
+  &quot;imgsz&quot;: 640,
+  &quot;fps_processamento&quot;: 3.85,
+  &quot;media_cobertura_geral&quot;: 0.9346,
+  &quot;total_trocas_tracker_id&quot;: 35,
+  &quot;por_grupo&quot;: {
+    &quot;time0&quot;: {
+      &quot;jogadores&quot;: 10,
+      &quot;media_cobertura&quot;: 0.9419,
+      &quot;trocas&quot;: 20
+    },
+    &quot;time1&quot;: {
+      &quot;jogadores&quot;: 9,
+      &quot;media_cobertura&quot;: 0.9437,
+      &quot;trocas&quot;: 12
+    },
+    &quot;goleiro_time1&quot;: {
+      &quot;jogadores&quot;: 1,
+      &quot;media_cobertura&quot;: 0.745,
+      &quot;trocas&quot;: 1
+    },
+    &quot;arbitro&quot;: {
+      &quot;jogadores&quot;: 1,
+      &quot;media_cobertura&quot;: 0.969,
+      &quot;trocas&quot;: 2
+    }
+  },
+  &quot;bola&quot;: {
+    &quot;frames_vistos_bola&quot;: 443,
+    &quot;presenca_bola&quot;: 0.5907,
+    &quot;num_perdas_bola&quot;: 65,
+    &quot;maior_falha_frames&quot;: 36
+  }
+}</pre></td></tr><tr><td><b>YOLO26M_COCO_SEM_APARENCIA_AUTO</b></td><td>Bundesliga_Video_2.mp4</td><td>yolo</td><td>bytetrack</td><td>yolo26m.pt</td><td></td><td>1.19</td><td>0.00%</td><td>16</td><td>—</td><td>92.7%</td><td><button onclick="toggle('det_11')">Detalhes</button></td></tr><tr id='det_11' style='display:none'><td colspan='12'><pre>{
+  &quot;nome_teste&quot;: &quot;YOLO26M_COCO_SEM_APARENCIA_AUTO&quot;,
+  &quot;video&quot;: &quot;Bundesliga_Video_2.mp4&quot;,
+  &quot;detector&quot;: &quot;yolo&quot;,
+  &quot;modelo_usado&quot;: &quot;yolo26m.pt&quot;,
+  &quot;tracker&quot;: &quot;bytetrack&quot;,
+  &quot;opcao_aparencia&quot;: &quot;none&quot;,
+  &quot;imgsz&quot;: &quot;auto&quot;,
+  &quot;fps_processamento&quot;: 1.19,
+  &quot;media_cobertura_geral&quot;: 0.9863,
+  &quot;total_trocas_tracker_id&quot;: 16,
+  &quot;por_grupo&quot;: {
+    &quot;time0&quot;: {
+      &quot;jogadores&quot;: 10,
+      &quot;media_cobertura&quot;: 0.9829,
+      &quot;trocas&quot;: 12
+    },
+    &quot;time1&quot;: {
+      &quot;jogadores&quot;: 9,
+      &quot;media_cobertura&quot;: 0.9875,
+      &quot;trocas&quot;: 4
+    },
+    &quot;goleiro_time1&quot;: {
+      &quot;jogadores&quot;: 1,
+      &quot;media_cobertura&quot;: 0.9986,
+      &quot;trocas&quot;: 0
+    },
+    &quot;arbitro&quot;: {
+      &quot;jogadores&quot;: 1,
+      &quot;media_cobertura&quot;: 0.996,
+      &quot;trocas&quot;: 0
+    }
+  },
+  &quot;bola&quot;: {
+    &quot;frames_vistos_bola&quot;: 695,
+    &quot;presenca_bola&quot;: 0.9267,
+    &quot;num_perdas_bola&quot;: 23,
+    &quot;maior_falha_frames&quot;: 7
+  }
+}</pre></td></tr><tr><td><b>YOLO26M_COCO_EMBEDDINGS_AUTO</b></td><td colspan='10' style='color:red'>ERRO: shapes (768,) and (34,) not aligned: 768 (dim 0) != 34 (dim 0)</td></tr><tr id='det_12' style='display:none'><td colspan='12'><pre>{
+  &quot;nome_teste&quot;: &quot;YOLO26M_COCO_EMBEDDINGS_AUTO&quot;,
+  &quot;erro&quot;: &quot;shapes (768,) and (34,) not aligned: 768 (dim 0) != 34 (dim 0)&quot;,
+  &quot;detector&quot;: &quot;yolo&quot;,
+  &quot;video&quot;: &quot;Bundesliga_Video_2.mp4&quot;
+}</pre></td></tr><tr><td><b>YOLO26S_COCO_HSV_1280</b></td><td>Bundesliga_Video_2.mp4</td><td>yolo</td><td></td><td>yolo26s.pt</td><td>hsv</td><td>2.72</td><td>99.92%</td><td>185</td><td>4.054054054054054</td><td>0.0%</td><td><button onclick="toggle('det_13')">Detalhes</button></td></tr><tr id='det_13' style='display:none'><td colspan='12'><pre>{
+  &quot;nome_teste&quot;: &quot;YOLO26S_COCO_HSV_1280&quot;,
+  &quot;video&quot;: &quot;Bundesliga_Video_2.mp4&quot;,
+  &quot;detector&quot;: &quot;yolo&quot;,
+  &quot;modelo_usado&quot;: &quot;yolo26s.pt&quot;,
+  &quot;aparencia&quot;: &quot;hsv&quot;,
+  &quot;imgsz&quot;: 1280,
+  &quot;fps_processamento&quot;: 2.718230495517689,
+  &quot;media_cobertura&quot;: 0.999156581541306,
+  &quot;media_presenca&quot;: 0.9976140350877194,
+  &quot;total_trocas_tracker_id&quot;: 185,
+  &quot;frames_por_troca_global&quot;: 4.054054054054054,
+  &quot;trocas_por_1000_frames_global&quot;: 246.66666666666666,
+  &quot;por_time&quot;: {
+    &quot;1&quot;: {
+      &quot;jogadores&quot;: 10,
+      &quot;cobertura_media&quot;: 0.999465953176301,
+      &quot;presenca_media&quot;: 0.998,
+      &quot;trocas&quot;: 86,
+      &quot;frames_vistos&quot;: 7485
+    },
+    &quot;2&quot;: {
+      &quot;jogadores&quot;: 9,
+      &quot;cobertura_media&quot;: 0.9988128352802002,
+      &quot;presenca_media&quot;: 0.9971851851851853,
+      &quot;trocas&quot;: 99,
+      &quot;frames_vistos&quot;: 6731
+    }
+  }
+}</pre></td></tr><tr><td><b>YOLO26S_COCO_SEM_APARENCIA_1280</b></td><td>Bundesliga_Video_2.mp4</td><td>yolo</td><td></td><td>yolo26s.pt</td><td>none</td><td>2.87</td><td>99.92%</td><td>185</td><td>4.054054054054054</td><td>0.0%</td><td><button onclick="toggle('det_14')">Detalhes</button></td></tr><tr id='det_14' style='display:none'><td colspan='12'><pre>{
+  &quot;nome_teste&quot;: &quot;YOLO26S_COCO_SEM_APARENCIA_1280&quot;,
+  &quot;video&quot;: &quot;Bundesliga_Video_2.mp4&quot;,
+  &quot;detector&quot;: &quot;yolo&quot;,
+  &quot;modelo_usado&quot;: &quot;yolo26s.pt&quot;,
+  &quot;aparencia&quot;: &quot;none&quot;,
+  &quot;imgsz&quot;: 1280,
+  &quot;fps_processamento&quot;: 2.8665193468473147,
+  &quot;media_cobertura&quot;: 0.999156581541306,
+  &quot;media_presenca&quot;: 0.9976140350877194,
+  &quot;total_trocas_tracker_id&quot;: 185,
+  &quot;frames_por_troca_global&quot;: 4.054054054054054,
+  &quot;trocas_por_1000_frames_global&quot;: 246.66666666666666,
+  &quot;por_time&quot;: {
+    &quot;1&quot;: {
+      &quot;jogadores&quot;: 10,
+      &quot;cobertura_media&quot;: 0.999465953176301,
+      &quot;presenca_media&quot;: 0.998,
+      &quot;trocas&quot;: 86,
+      &quot;frames_vistos&quot;: 7485
+    },
+    &quot;2&quot;: {
+      &quot;jogadores&quot;: 9,
+      &quot;cobertura_media&quot;: 0.9988128352802002,
+      &quot;presenca_media&quot;: 0.9971851851851853,
+      &quot;trocas&quot;: 99,
+      &quot;frames_vistos&quot;: 6731
+    }
+  }
+}</pre></td></tr><tr><td><b>YOLO26S_COCO_EMBEDDINGS_1280</b></td><td colspan='10' style='color:red'>ERRO: shapes (768,) and (34,) not aligned: 768 (dim 0) != 34 (dim 0)</td></tr><tr id='det_15' style='display:none'><td colspan='12'><pre>{
+  &quot;nome_teste&quot;: &quot;YOLO26S_COCO_EMBEDDINGS_1280&quot;,
+  &quot;erro&quot;: &quot;shapes (768,) and (34,) not aligned: 768 (dim 0) != 34 (dim 0)&quot;
+}</pre></td></tr><tr><td><b>YOLO26S_ByteTrack_HSV</b></td><td>Bundesliga_Video_2.mp4</td><td>yolo</td><td>bytetrack</td><td>yolo26s.pt</td><td>hsv</td><td>2.58</td><td>95.58%</td><td>48</td><td>15.625</td><td>64.7%</td><td><button onclick="toggle('det_16')">Detalhes</button></td></tr><tr id='det_16' style='display:none'><td colspan='12'><pre>{
+  &quot;nome_teste&quot;: &quot;YOLO26S_ByteTrack_HSV&quot;,
+  &quot;video&quot;: &quot;Bundesliga_Video_2.mp4&quot;,
+  &quot;detector&quot;: &quot;yolo&quot;,
+  &quot;modelo_usado&quot;: &quot;yolo26s.pt&quot;,
+  &quot;tracker&quot;: &quot;bytetrack&quot;,
+  &quot;aparencia&quot;: &quot;hsv&quot;,
+  &quot;imgsz&quot;: 1280,
+  &quot;fps_processamento&quot;: 2.5834992297878534,
+  &quot;media_cobertura&quot;: 0.9557806410009149,
+  &quot;media_presenca&quot;: 0.9511111111111109,
+  &quot;total_trocas_tracker_id&quot;: 48,
+  &quot;frames_por_troca_global&quot;: 15.625,
+  &quot;trocas_por_1000_frames_global&quot;: 64.0,
+  &quot;por_grupo&quot;: {
+    &quot;time0&quot;: {
+      &quot;jogadores&quot;: 10,
+      &quot;cobertura_media&quot;: 0.9647016304055211,
+      &quot;presenca_media&quot;: 0.9571999999999999,
+      &quot;trocas&quot;: 20,
+      &quot;frames_vistos&quot;: 7179
+    },
+    &quot;time1&quot;: {
+      &quot;jogadores&quot;: 9,
+      &quot;cobertura_media&quot;: 0.9400472467832722,
+      &quot;presenca_media&quot;: 0.9377777777777777,
+      &quot;trocas&quot;: 27,
+      &quot;frames_vistos&quot;: 6330
+    },
+    &quot;goleiro_time1&quot;: {
+      &quot;jogadores&quot;: 1,
+      &quot;cobertura_media&quot;: 0.9786381842456608,
+      &quot;presenca_media&quot;: 0.9773333333333334,
+      &quot;trocas&quot;: 0,
+      &quot;frames_vistos&quot;: 733
+    },
+    &quot;arbitro&quot;: {
+      &quot;jogadores&quot;: 1,
+      &quot;cobertura_media&quot;: 0.9853137516688919,
+      &quot;presenca_media&quot;: 0.984,
+      &quot;trocas&quot;: 1,
+      &quot;frames_vistos&quot;: 738
+    }
+  },
+  &quot;bola&quot;: {
+    &quot;frames_vistos_bola&quot;: 485,
+    &quot;presenca_bola&quot;: 0.6467,
+    &quot;num_perdas_bola&quot;: 59,
+    &quot;maior_falha_frames&quot;: 23,
+    &quot;confianca_media_bola&quot;: 0.3685
+  }
+}</pre></td></tr><tr><td><b>YOLO26S_BoTSORT_HSV</b></td><td>Bundesliga_Video_2.mp4</td><td>yolo</td><td>botsort</td><td>yolo26s.pt</td><td>hsv</td><td>1.31</td><td>97.06%</td><td>11</td><td>68.18181818181819</td><td>64.7%</td><td><button onclick="toggle('det_17')">Detalhes</button></td></tr><tr id='det_17' style='display:none'><td colspan='12'><pre>{
+  &quot;nome_teste&quot;: &quot;YOLO26S_BoTSORT_HSV&quot;,
+  &quot;video&quot;: &quot;Bundesliga_Video_2.mp4&quot;,
+  &quot;detector&quot;: &quot;yolo&quot;,
+  &quot;modelo_usado&quot;: &quot;yolo26s.pt&quot;,
+  &quot;tracker&quot;: &quot;botsort&quot;,
+  &quot;aparencia&quot;: &quot;hsv&quot;,
+  &quot;imgsz&quot;: 1280,
+  &quot;fps_processamento&quot;: 1.3074858710475992,
+  &quot;media_cobertura&quot;: 0.9706232014767904,
+  &quot;media_presenca&quot;: 0.6139047619047618,
+  &quot;total_trocas_tracker_id&quot;: 11,
+  &quot;frames_por_troca_global&quot;: 68.18181818181819,
+  &quot;trocas_por_1000_frames_global&quot;: 14.666666666666666,
+  &quot;por_grupo&quot;: {
+    &quot;time0&quot;: {
+      &quot;jogadores&quot;: 10,
+      &quot;cobertura_media&quot;: 0.9769214057801262,
+      &quot;presenca_media&quot;: 0.5473333333333334,
+      &quot;trocas&quot;: 7,
+      &quot;frames_vistos&quot;: 4105
+    },
+    &quot;time1&quot;: {
+      &quot;jogadores&quot;: 9,
+      &quot;cobertura_media&quot;: 0.9636155377642225,
+      &quot;presenca_media&quot;: 0.6085925925925926,
+      &quot;trocas&quot;: 4,
+      &quot;frames_vistos&quot;: 4108
+    },
+    &quot;goleiro_time1&quot;: {
+      &quot;jogadores&quot;: 1,
+      &quot;cobertura_media&quot;: 0.976,
+      &quot;presenca_media&quot;: 0.976,
+      &quot;trocas&quot;: 0,
+      &quot;frames_vistos&quot;: 732
+    },
+    &quot;arbitro&quot;: {
+      &quot;jogadores&quot;: 1,
+      &quot;cobertura_media&quot;: 0.9653333333333334,
+      &quot;presenca_media&quot;: 0.9653333333333334,
+      &quot;trocas&quot;: 0,
+      &quot;frames_vistos&quot;: 724
+    }
+  },
+  &quot;bola&quot;: {
+    &quot;frames_vistos_bola&quot;: 485,
+    &quot;presenca_bola&quot;: 0.6467,
+    &quot;num_perdas_bola&quot;: 59,
+    &quot;maior_falha_frames&quot;: 23,
+    &quot;confianca_media_bola&quot;: 0.3685
+  }
+}</pre></td></tr><tr><td><b>YOLO26S_ByteTrack_HSVKMeansDuplo</b></td><td>Bundesliga_Video_2.mp4</td><td>yolo</td><td>bytetrack</td><td>yolo26s.pt</td><td>kmeans_hsv</td><td>2.77</td><td>95.58%</td><td>48</td><td>15.625</td><td>64.7%</td><td><button onclick="toggle('det_18')">Detalhes</button></td></tr><tr id='det_18' style='display:none'><td colspan='12'><pre>{
+  &quot;nome_teste&quot;: &quot;YOLO26S_ByteTrack_HSVKMeansDuplo&quot;,
+  &quot;video&quot;: &quot;Bundesliga_Video_2.mp4&quot;,
+  &quot;detector&quot;: &quot;yolo&quot;,
+  &quot;modelo_usado&quot;: &quot;yolo26s.pt&quot;,
+  &quot;tracker&quot;: &quot;bytetrack&quot;,
+  &quot;aparencia&quot;: &quot;kmeans_hsv&quot;,
+  &quot;imgsz&quot;: 1280,
+  &quot;fps_processamento&quot;: 2.767439248706077,
+  &quot;media_cobertura&quot;: 0.9557806410009149,
+  &quot;media_presenca&quot;: 0.9511111111111109,
+  &quot;total_trocas_tracker_id&quot;: 48,
+  &quot;frames_por_troca_global&quot;: 15.625,
+  &quot;trocas_por_1000_frames_global&quot;: 64.0,
+  &quot;por_grupo&quot;: {
+    &quot;time0&quot;: {
+      &quot;jogadores&quot;: 10,
+      &quot;cobertura_media&quot;: 0.9647016304055211,
+      &quot;presenca_media&quot;: 0.9571999999999999,
+      &quot;trocas&quot;: 20,
+      &quot;frames_vistos&quot;: 7179
+    },
+    &quot;time1&quot;: {
+      &quot;jogadores&quot;: 9,
+      &quot;cobertura_media&quot;: 0.9400472467832722,
+      &quot;presenca_media&quot;: 0.9377777777777777,
+      &quot;trocas&quot;: 27,
+      &quot;frames_vistos&quot;: 6330
+    },
+    &quot;goleiro_time1&quot;: {
+      &quot;jogadores&quot;: 1,
+      &quot;cobertura_media&quot;: 0.9786381842456608,
+      &quot;presenca_media&quot;: 0.9773333333333334,
+      &quot;trocas&quot;: 0,
+      &quot;frames_vistos&quot;: 733
+    },
+    &quot;arbitro&quot;: {
+      &quot;jogadores&quot;: 1,
+      &quot;cobertura_media&quot;: 0.9853137516688919,
+      &quot;presenca_media&quot;: 0.984,
+      &quot;trocas&quot;: 1,
+      &quot;frames_vistos&quot;: 738
+    }
+  },
+  &quot;bola&quot;: {
+    &quot;frames_vistos_bola&quot;: 485,
+    &quot;presenca_bola&quot;: 0.6467,
+    &quot;num_perdas_bola&quot;: 59,
+    &quot;maior_falha_frames&quot;: 23,
+    &quot;confianca_media_bola&quot;: 0.3685
+  }
+}</pre></td></tr><tr><td><b>YOLO26S_ByteTrack_MobileNet</b></td><td>Bundesliga_Video_2.mp4</td><td>yolo</td><td>bytetrack</td><td>yolo26s.pt</td><td>mobilenet</td><td>2.65</td><td>95.58%</td><td>48</td><td>15.625</td><td>64.7%</td><td><button onclick="toggle('det_19')">Detalhes</button></td></tr><tr id='det_19' style='display:none'><td colspan='12'><pre>{
+  &quot;nome_teste&quot;: &quot;YOLO26S_ByteTrack_MobileNet&quot;,
+  &quot;video&quot;: &quot;Bundesliga_Video_2.mp4&quot;,
+  &quot;detector&quot;: &quot;yolo&quot;,
+  &quot;modelo_usado&quot;: &quot;yolo26s.pt&quot;,
+  &quot;tracker&quot;: &quot;bytetrack&quot;,
+  &quot;aparencia&quot;: &quot;mobilenet&quot;,
+  &quot;imgsz&quot;: 1280,
+  &quot;fps_processamento&quot;: 2.6530054119639526,
+  &quot;media_cobertura&quot;: 0.9557806410009149,
+  &quot;media_presenca&quot;: 0.9511111111111109,
+  &quot;total_trocas_tracker_id&quot;: 48,
+  &quot;frames_por_troca_global&quot;: 15.625,
+  &quot;trocas_por_1000_frames_global&quot;: 64.0,
+  &quot;por_grupo&quot;: {
+    &quot;time0&quot;: {
+      &quot;jogadores&quot;: 10,
+      &quot;cobertura_media&quot;: 0.9647016304055211,
+      &quot;presenca_media&quot;: 0.9571999999999999,
+      &quot;trocas&quot;: 20,
+      &quot;frames_vistos&quot;: 7179
+    },
+    &quot;time1&quot;: {
+      &quot;jogadores&quot;: 9,
+      &quot;cobertura_media&quot;: 0.9400472467832722,
+      &quot;presenca_media&quot;: 0.9377777777777777,
+      &quot;trocas&quot;: 27,
+      &quot;frames_vistos&quot;: 6330
+    },
+    &quot;goleiro_time1&quot;: {
+      &quot;jogadores&quot;: 1,
+      &quot;cobertura_media&quot;: 0.9786381842456608,
+      &quot;presenca_media&quot;: 0.9773333333333334,
+      &quot;trocas&quot;: 0,
+      &quot;frames_vistos&quot;: 733
+    },
+    &quot;arbitro&quot;: {
+      &quot;jogadores&quot;: 1,
+      &quot;cobertura_media&quot;: 0.9853137516688919,
+      &quot;presenca_media&quot;: 0.984,
+      &quot;trocas&quot;: 1,
+      &quot;frames_vistos&quot;: 738
+    }
+  },
+  &quot;bola&quot;: {
+    &quot;frames_vistos_bola&quot;: 485,
+    &quot;presenca_bola&quot;: 0.6467,
+    &quot;num_perdas_bola&quot;: 59,
+    &quot;maior_falha_frames&quot;: 23,
+    &quot;confianca_media_bola&quot;: 0.3685
+  }
+}</pre></td></tr><tr><td><b>YOLO26M_ByteTrack_HSV</b></td><td>Video_teste.mp4</td><td>yolo</td><td>bytetrack</td><td>yolo26m.pt</td><td>hsv</td><td>1.24</td><td>96.90%</td><td>20</td><td>26.3</td><td>50.6%</td><td><button onclick="toggle('det_20')">Detalhes</button></td></tr><tr id='det_20' style='display:none'><td colspan='12'><pre>{
+  &quot;nome_teste&quot;: &quot;YOLO26M_ByteTrack_HSV&quot;,
+  &quot;video&quot;: &quot;Video_teste.mp4&quot;,
+  &quot;detector&quot;: &quot;yolo&quot;,
+  &quot;modelo_usado&quot;: &quot;yolo26m.pt&quot;,
+  &quot;tracker&quot;: &quot;bytetrack&quot;,
+  &quot;aparencia&quot;: &quot;hsv&quot;,
+  &quot;imgsz&quot;: 1280,
+  &quot;fps_processamento&quot;: 1.2364739749601807,
+  &quot;media_cobertura&quot;: 0.9689657794676807,
+  &quot;media_presenca&quot;: 0.967300380228137,
+  &quot;total_trocas_tracker_id&quot;: 20,
+  &quot;frames_por_troca_global&quot;: 26.3,
+  &quot;trocas_por_1000_frames_global&quot;: 38.02281368821293,
+  &quot;por_grupo&quot;: {
+    &quot;time0&quot;: {
+      &quot;jogadores&quot;: 5,
+      &quot;cobertura_media&quot;: 0.984,
+      &quot;presenca_media&quot;: 0.98212927756654,
+      &quot;trocas&quot;: 4,
+      &quot;frames_vistos&quot;: 2583
+    },
+    &quot;time1&quot;: {
+      &quot;jogadores&quot;: 4,
+      &quot;cobertura_media&quot;: 0.9509858772406301,
+      &quot;presenca_media&quot;: 0.9496197718631179,
+      &quot;trocas&quot;: 10,
+      &quot;frames_vistos&quot;: 1998
+    },
+    &quot;goleiro_time1&quot;: {
+      &quot;jogadores&quot;: 1,
+      &quot;cobertura_media&quot;: 0.9657142857142857,
+      &quot;presenca_media&quot;: 0.9638783269961977,
+      &quot;trocas&quot;: 6,
+      &quot;frames_vistos&quot;: 507
+    }
+  },
+  &quot;bola&quot;: {
+    &quot;frames_vistos_bola&quot;: 266,
+    &quot;presenca_bola&quot;: 0.5057,
+    &quot;num_perdas_bola&quot;: 39,
+    &quot;maior_falha_frames&quot;: 43,
+    &quot;confianca_media_bola&quot;: 0.411
+  }
+}</pre></td></tr><tr><td><b>YOLO26M_BoTSORT_HSV</b></td><td>Video_teste.mp4</td><td>yolo</td><td>botsort</td><td>yolo26m.pt</td><td>hsv</td><td>0.61</td><td>98.10%</td><td>5</td><td>105.2</td><td>50.6%</td><td><button onclick="toggle('det_21')">Detalhes</button></td></tr><tr id='det_21' style='display:none'><td colspan='12'><pre>{
+  &quot;nome_teste&quot;: &quot;YOLO26M_BoTSORT_HSV&quot;,
+  &quot;video&quot;: &quot;Video_teste.mp4&quot;,
+  &quot;detector&quot;: &quot;yolo&quot;,
+  &quot;modelo_usado&quot;: &quot;yolo26m.pt&quot;,
+  &quot;tracker&quot;: &quot;botsort&quot;,
+  &quot;aparencia&quot;: &quot;hsv&quot;,
+  &quot;imgsz&quot;: 1280,
+  &quot;fps_processamento&quot;: 0.6106253281664219,
+  &quot;media_cobertura&quot;: 0.9809554873588262,
+  &quot;media_presenca&quot;: 0.8022813688212928,
+  &quot;total_trocas_tracker_id&quot;: 5,
+  &quot;frames_por_troca_global&quot;: 105.2,
+  &quot;trocas_por_1000_frames_global&quot;: 9.505703422053232,
+  &quot;por_grupo&quot;: {
+    &quot;time0&quot;: {
+      &quot;jogadores&quot;: 5,
+      &quot;cobertura_media&quot;: 0.9828897338403042,
+      &quot;presenca_media&quot;: 0.9828897338403042,
+      &quot;trocas&quot;: 2,
+      &quot;frames_vistos&quot;: 2585
+    },
+    &quot;time1&quot;: {
+      &quot;jogadores&quot;: 4,
+      &quot;cobertura_media&quot;: 0.976628262123301,
+      &quot;presenca_media&quot;: 0.5299429657794678,
+      &quot;trocas&quot;: 0,
+      &quot;frames_vistos&quot;: 1115
+    },
+    &quot;goleiro_time1&quot;: {
+      &quot;jogadores&quot;: 1,
+      &quot;cobertura_media&quot;: 0.9885931558935361,
+      &quot;presenca_media&quot;: 0.9885931558935361,
+      &quot;trocas&quot;: 3,
+      &quot;frames_vistos&quot;: 520
+    }
+  },
+  &quot;bola&quot;: {
+    &quot;frames_vistos_bola&quot;: 266,
+    &quot;presenca_bola&quot;: 0.5057,
+    &quot;num_perdas_bola&quot;: 39,
+    &quot;maior_falha_frames&quot;: 43,
+    &quot;confianca_media_bola&quot;: 0.411
+  }
+}</pre></td></tr><tr><td><b>YOLO26M_ByteTrack_HSVKMeansDuplo</b></td><td>Video_teste.mp4</td><td>yolo</td><td>bytetrack</td><td>yolo26m.pt</td><td>kmeans_hsv</td><td>1.21</td><td>96.90%</td><td>20</td><td>26.3</td><td>50.6%</td><td><button onclick="toggle('det_22')">Detalhes</button></td></tr><tr id='det_22' style='display:none'><td colspan='12'><pre>{
+  &quot;nome_teste&quot;: &quot;YOLO26M_ByteTrack_HSVKMeansDuplo&quot;,
+  &quot;video&quot;: &quot;Video_teste.mp4&quot;,
+  &quot;detector&quot;: &quot;yolo&quot;,
+  &quot;modelo_usado&quot;: &quot;yolo26m.pt&quot;,
+  &quot;tracker&quot;: &quot;bytetrack&quot;,
+  &quot;aparencia&quot;: &quot;kmeans_hsv&quot;,
+  &quot;imgsz&quot;: 1280,
+  &quot;fps_processamento&quot;: 1.2097839681207059,
+  &quot;media_cobertura&quot;: 0.9689657794676807,
+  &quot;media_presenca&quot;: 0.967300380228137,
+  &quot;total_trocas_tracker_id&quot;: 20,
+  &quot;frames_por_troca_global&quot;: 26.3,
+  &quot;trocas_por_1000_frames_global&quot;: 38.02281368821293,
+  &quot;por_grupo&quot;: {
+    &quot;time0&quot;: {
+      &quot;jogadores&quot;: 5,
+      &quot;cobertura_media&quot;: 0.984,
+      &quot;presenca_media&quot;: 0.98212927756654,
+      &quot;trocas&quot;: 4,
+      &quot;frames_vistos&quot;: 2583
+    },
+    &quot;time1&quot;: {
+      &quot;jogadores&quot;: 4,
+      &quot;cobertura_media&quot;: 0.9509858772406301,
+      &quot;presenca_media&quot;: 0.9496197718631179,
+      &quot;trocas&quot;: 10,
+      &quot;frames_vistos&quot;: 1998
+    },
+    &quot;goleiro_time1&quot;: {
+      &quot;jogadores&quot;: 1,
+      &quot;cobertura_media&quot;: 0.9657142857142857,
+      &quot;presenca_media&quot;: 0.9638783269961977,
+      &quot;trocas&quot;: 6,
+      &quot;frames_vistos&quot;: 507
+    }
+  },
+  &quot;bola&quot;: {
+    &quot;frames_vistos_bola&quot;: 266,
+    &quot;presenca_bola&quot;: 0.5057,
+    &quot;num_perdas_bola&quot;: 39,
+    &quot;maior_falha_frames&quot;: 43,
+    &quot;confianca_media_bola&quot;: 0.411
+  }
+}</pre></td></tr><tr><td><b>YOLO26M_ByteTrack_MobileNet</b></td><td>Video_teste.mp4</td><td>yolo</td><td>bytetrack</td><td>yolo26m.pt</td><td>mobilenet</td><td>1.26</td><td>96.90%</td><td>20</td><td>26.3</td><td>50.6%</td><td><button onclick="toggle('det_23')">Detalhes</button></td></tr><tr id='det_23' style='display:none'><td colspan='12'><pre>{
+  &quot;nome_teste&quot;: &quot;YOLO26M_ByteTrack_MobileNet&quot;,
+  &quot;video&quot;: &quot;Video_teste.mp4&quot;,
+  &quot;detector&quot;: &quot;yolo&quot;,
+  &quot;modelo_usado&quot;: &quot;yolo26m.pt&quot;,
+  &quot;tracker&quot;: &quot;bytetrack&quot;,
+  &quot;aparencia&quot;: &quot;mobilenet&quot;,
+  &quot;imgsz&quot;: 1280,
+  &quot;fps_processamento&quot;: 1.26081841030915,
+  &quot;media_cobertura&quot;: 0.9689657794676807,
+  &quot;media_presenca&quot;: 0.967300380228137,
+  &quot;total_trocas_tracker_id&quot;: 20,
+  &quot;frames_por_troca_global&quot;: 26.3,
+  &quot;trocas_por_1000_frames_global&quot;: 38.02281368821293,
+  &quot;por_grupo&quot;: {
+    &quot;time0&quot;: {
+      &quot;jogadores&quot;: 5,
+      &quot;cobertura_media&quot;: 0.984,
+      &quot;presenca_media&quot;: 0.98212927756654,
+      &quot;trocas&quot;: 4,
+      &quot;frames_vistos&quot;: 2583
+    },
+    &quot;time1&quot;: {
+      &quot;jogadores&quot;: 4,
+      &quot;cobertura_media&quot;: 0.9509858772406301,
+      &quot;presenca_media&quot;: 0.9496197718631179,
+      &quot;trocas&quot;: 10,
+      &quot;frames_vistos&quot;: 1998
+    },
+    &quot;goleiro_time1&quot;: {
+      &quot;jogadores&quot;: 1,
+      &quot;cobertura_media&quot;: 0.9657142857142857,
+      &quot;presenca_media&quot;: 0.9638783269961977,
+      &quot;trocas&quot;: 6,
+      &quot;frames_vistos&quot;: 507
+    }
+  },
+  &quot;bola&quot;: {
+    &quot;frames_vistos_bola&quot;: 266,
+    &quot;presenca_bola&quot;: 0.5057,
+    &quot;num_perdas_bola&quot;: 39,
+    &quot;maior_falha_frames&quot;: 43,
+    &quot;confianca_media_bola&quot;: 0.411
+  }
+}</pre></td></tr>
+</table>
+</body></html>

@@ -1,0 +1,62 @@
+<<<<<<< HEAD
+{
+  "nome_teste": "YOLO26S_COCO_HSV_1280",
+  "video": "Bundesliga_Video_2.mp4",
+  "detector": "yolo",
+  "modelo_usado": "yolo26s.pt",
+  "aparencia": "hsv",
+  "imgsz": 1280,
+  "fps_processamento": 2.718230495517689,
+  "media_cobertura": 0.999156581541306,
+  "media_presenca": 0.9976140350877194,
+  "total_trocas_tracker_id": 185,
+  "frames_por_troca_global": 4.054054054054054,
+  "trocas_por_1000_frames_global": 246.66666666666666,
+  "por_time": {
+    "1": {
+      "jogadores": 10,
+      "cobertura_media": 0.999465953176301,
+      "presenca_media": 0.998,
+      "trocas": 86,
+      "frames_vistos": 7485
+    },
+    "2": {
+      "jogadores": 9,
+      "cobertura_media": 0.9988128352802002,
+      "presenca_media": 0.9971851851851853,
+      "trocas": 99,
+      "frames_vistos": 6731
+    }
+  }
+=======
+{
+  "nome_teste": "YOLO26S_COCO_HSV_1280",
+  "video": "Bundesliga_Video_2.mp4",
+  "detector": "yolo",
+  "modelo_usado": "yolo26s.pt",
+  "aparencia": "hsv",
+  "imgsz": 1280,
+  "fps_processamento": 2.718230495517689,
+  "media_cobertura": 0.999156581541306,
+  "media_presenca": 0.9976140350877194,
+  "total_trocas_tracker_id": 185,
+  "frames_por_troca_global": 4.054054054054054,
+  "trocas_por_1000_frames_global": 246.66666666666666,
+  "por_time": {
+    "1": {
+      "jogadores": 10,
+      "cobertura_media": 0.999465953176301,
+      "presenca_media": 0.998,
+      "trocas": 86,
+      "frames_vistos": 7485
+    },
+    "2": {
+      "jogadores": 9,
+      "cobertura_media": 0.9988128352802002,
+      "presenca_media": 0.9971851851851853,
+      "trocas": 99,
+      "frames_vistos": 6731
+    }
+  }
+>>>>>>> 4dc20829d235225851d5c4a93b2901c22a9453e9
+}

@@ -1,0 +1,1398 @@
+<<<<<<< HEAD
+[
+  {
+    "nome_teste": "YOLO_CPU_HSV",
+    "erro": "list indices must be integers or slices, not str",
+    "detector": "yolo",
+    "opcao_aparencia": "hsv"
+  },
+  {
+    "nome_teste": "YOLO_CPU_SEM_APARENCIA",
+    "video": "Bundesliga_Video_2.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26s.pt",
+    "opcao_aparencia": "none",
+    "imgsz": 640,
+    "fps_processamento": 8.605635165521232,
+    "media_cobertura_no_periodo": 0.9619235781103009,
+    "media_presenca_no_video": 0.9319999999999999,
+    "total_trocas_tracker_id": 55
+  },
+  {
+    "nome_teste": "YOLO_CPU_EMBEDDINGS",
+    "erro": "list indices must be integers or slices, not str",
+    "detector": "yolo",
+    "opcao_aparencia": "embeddings"
+  },
+  {
+    "nome_teste": "YOLO_CPU_HSV_AUTO",
+    "video": "Bundesliga_Video_2.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26s.pt",
+    "opcao_aparencia": "hsv",
+    "imgsz": "auto",
+    "fps_processamento": 2.871296925346469,
+    "media_cobertura_no_periodo": 1.0,
+    "media_presenca_no_video": 0.9985925925925925,
+    "total_trocas_tracker_id": 116
+  },
+  {
+    "nome_teste": "YOLO26S_COCO_HSV_AUTO",
+    "video": "Bundesliga_Video_2.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26s.pt",
+    "opcao_aparencia": "hsv",
+    "imgsz": "auto",
+    "fps_processamento": 3.13,
+    "media_cobertura": 1.0,
+    "media_presenca": 0.9985,
+    "total_trocas_tracker_id": 121
+  },
+  {
+    "nome_teste": "YOLO26S_COCO_HSV_640",
+    "video": "Bundesliga_Video_2.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26s.pt",
+    "opcao_aparencia": "hsv",
+    "imgsz": 640,
+    "fps_processamento": 9.72,
+    "media_cobertura": 0.9411,
+    "media_presenca": 0.904,
+    "total_trocas_tracker_id": 47
+  },
+  {
+    "nome_teste": "YOLO26S_COCO_SEM_APARENCIA_640",
+    "video": "Bundesliga_Video_2.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26s.pt",
+    "opcao_aparencia": "none",
+    "imgsz": 640,
+    "fps_processamento": 10.07,
+    "media_cobertura": 0.9411,
+    "media_presenca": 0.904,
+    "total_trocas_tracker_id": 47
+  },
+  {
+    "nome_teste": "YOLO26S_COCO_EMBEDDINGS_AUTO",
+    "erro": "shapes (768,) and (34,) not aligned: 768 (dim 0) != 34 (dim 0)",
+    "detector": "yolo",
+    "video": "Bundesliga_Video_2.mp4"
+  },
+  {
+    "nome_teste": "YOLO26M_COCO_HSV_AUTO",
+    "video": "Bundesliga_Video_2.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26m.pt",
+    "tracker": "bytetrack",
+    "opcao_aparencia": "hsv",
+    "imgsz": "auto",
+    "fps_processamento": 1.26,
+    "media_cobertura_geral": 0.9863,
+    "total_trocas_tracker_id": 16,
+    "por_grupo": {
+      "time0": {
+        "jogadores": 10,
+        "media_cobertura": 0.9829,
+        "trocas": 12
+      },
+      "time1": {
+        "jogadores": 9,
+        "media_cobertura": 0.9875,
+        "trocas": 4
+      },
+      "goleiro_time1": {
+        "jogadores": 1,
+        "media_cobertura": 0.9986,
+        "trocas": 0
+      },
+      "arbitro": {
+        "jogadores": 1,
+        "media_cobertura": 0.996,
+        "trocas": 0
+      }
+    },
+    "bola": {
+      "frames_vistos_bola": 695,
+      "presenca_bola": 0.9267,
+      "num_perdas_bola": 23,
+      "maior_falha_frames": 7
+    }
+  },
+  {
+    "nome_teste": "YOLO26M_COCO_HSV_640",
+    "video": "Bundesliga_Video_2.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26m.pt",
+    "tracker": "bytetrack",
+    "opcao_aparencia": "hsv",
+    "imgsz": 640,
+    "fps_processamento": 4.03,
+    "media_cobertura_geral": 0.9346,
+    "total_trocas_tracker_id": 35,
+    "por_grupo": {
+      "time0": {
+        "jogadores": 10,
+        "media_cobertura": 0.9419,
+        "trocas": 20
+      },
+      "time1": {
+        "jogadores": 9,
+        "media_cobertura": 0.9437,
+        "trocas": 12
+      },
+      "goleiro_time1": {
+        "jogadores": 1,
+        "media_cobertura": 0.745,
+        "trocas": 1
+      },
+      "arbitro": {
+        "jogadores": 1,
+        "media_cobertura": 0.969,
+        "trocas": 2
+      }
+    },
+    "bola": {
+      "frames_vistos_bola": 443,
+      "presenca_bola": 0.5907,
+      "num_perdas_bola": 65,
+      "maior_falha_frames": 36
+    }
+  },
+  {
+    "nome_teste": "YOLO26M_COCO_SEM_APARENCIA_640",
+    "video": "Bundesliga_Video_2.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26m.pt",
+    "tracker": "bytetrack",
+    "opcao_aparencia": "none",
+    "imgsz": 640,
+    "fps_processamento": 3.85,
+    "media_cobertura_geral": 0.9346,
+    "total_trocas_tracker_id": 35,
+    "por_grupo": {
+      "time0": {
+        "jogadores": 10,
+        "media_cobertura": 0.9419,
+        "trocas": 20
+      },
+      "time1": {
+        "jogadores": 9,
+        "media_cobertura": 0.9437,
+        "trocas": 12
+      },
+      "goleiro_time1": {
+        "jogadores": 1,
+        "media_cobertura": 0.745,
+        "trocas": 1
+      },
+      "arbitro": {
+        "jogadores": 1,
+        "media_cobertura": 0.969,
+        "trocas": 2
+      }
+    },
+    "bola": {
+      "frames_vistos_bola": 443,
+      "presenca_bola": 0.5907,
+      "num_perdas_bola": 65,
+      "maior_falha_frames": 36
+    }
+  },
+  {
+    "nome_teste": "YOLO26M_COCO_SEM_APARENCIA_AUTO",
+    "video": "Bundesliga_Video_2.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26m.pt",
+    "tracker": "bytetrack",
+    "opcao_aparencia": "none",
+    "imgsz": "auto",
+    "fps_processamento": 1.19,
+    "media_cobertura_geral": 0.9863,
+    "total_trocas_tracker_id": 16,
+    "por_grupo": {
+      "time0": {
+        "jogadores": 10,
+        "media_cobertura": 0.9829,
+        "trocas": 12
+      },
+      "time1": {
+        "jogadores": 9,
+        "media_cobertura": 0.9875,
+        "trocas": 4
+      },
+      "goleiro_time1": {
+        "jogadores": 1,
+        "media_cobertura": 0.9986,
+        "trocas": 0
+      },
+      "arbitro": {
+        "jogadores": 1,
+        "media_cobertura": 0.996,
+        "trocas": 0
+      }
+    },
+    "bola": {
+      "frames_vistos_bola": 695,
+      "presenca_bola": 0.9267,
+      "num_perdas_bola": 23,
+      "maior_falha_frames": 7
+    }
+  },
+  {
+    "nome_teste": "YOLO26M_COCO_EMBEDDINGS_AUTO",
+    "erro": "shapes (768,) and (34,) not aligned: 768 (dim 0) != 34 (dim 0)",
+    "detector": "yolo",
+    "video": "Bundesliga_Video_2.mp4"
+  },
+  {
+    "nome_teste": "YOLO26S_COCO_HSV_1280",
+    "video": "Bundesliga_Video_2.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26s.pt",
+    "aparencia": "hsv",
+    "imgsz": 1280,
+    "fps_processamento": 2.718230495517689,
+    "media_cobertura": 0.999156581541306,
+    "media_presenca": 0.9976140350877194,
+    "total_trocas_tracker_id": 185,
+    "frames_por_troca_global": 4.054054054054054,
+    "trocas_por_1000_frames_global": 246.66666666666666,
+    "por_time": {
+      "1": {
+        "jogadores": 10,
+        "cobertura_media": 0.999465953176301,
+        "presenca_media": 0.998,
+        "trocas": 86,
+        "frames_vistos": 7485
+      },
+      "2": {
+        "jogadores": 9,
+        "cobertura_media": 0.9988128352802002,
+        "presenca_media": 0.9971851851851853,
+        "trocas": 99,
+        "frames_vistos": 6731
+      }
+    }
+  },
+  {
+    "nome_teste": "YOLO26S_COCO_SEM_APARENCIA_1280",
+    "video": "Bundesliga_Video_2.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26s.pt",
+    "aparencia": "none",
+    "imgsz": 1280,
+    "fps_processamento": 2.8665193468473147,
+    "media_cobertura": 0.999156581541306,
+    "media_presenca": 0.9976140350877194,
+    "total_trocas_tracker_id": 185,
+    "frames_por_troca_global": 4.054054054054054,
+    "trocas_por_1000_frames_global": 246.66666666666666,
+    "por_time": {
+      "1": {
+        "jogadores": 10,
+        "cobertura_media": 0.999465953176301,
+        "presenca_media": 0.998,
+        "trocas": 86,
+        "frames_vistos": 7485
+      },
+      "2": {
+        "jogadores": 9,
+        "cobertura_media": 0.9988128352802002,
+        "presenca_media": 0.9971851851851853,
+        "trocas": 99,
+        "frames_vistos": 6731
+      }
+    }
+  },
+  {
+    "nome_teste": "YOLO26S_COCO_EMBEDDINGS_1280",
+    "erro": "shapes (768,) and (34,) not aligned: 768 (dim 0) != 34 (dim 0)"
+  },
+  {
+    "nome_teste": "YOLO26S_ByteTrack_HSV",
+    "video": "Bundesliga_Video_2.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26s.pt",
+    "tracker": "bytetrack",
+    "aparencia": "hsv",
+    "imgsz": 1280,
+    "fps_processamento": 2.5834992297878534,
+    "media_cobertura": 0.9557806410009149,
+    "media_presenca": 0.9511111111111109,
+    "total_trocas_tracker_id": 48,
+    "frames_por_troca_global": 15.625,
+    "trocas_por_1000_frames_global": 64.0,
+    "por_grupo": {
+      "time0": {
+        "jogadores": 10,
+        "cobertura_media": 0.9647016304055211,
+        "presenca_media": 0.9571999999999999,
+        "trocas": 20,
+        "frames_vistos": 7179
+      },
+      "time1": {
+        "jogadores": 9,
+        "cobertura_media": 0.9400472467832722,
+        "presenca_media": 0.9377777777777777,
+        "trocas": 27,
+        "frames_vistos": 6330
+      },
+      "goleiro_time1": {
+        "jogadores": 1,
+        "cobertura_media": 0.9786381842456608,
+        "presenca_media": 0.9773333333333334,
+        "trocas": 0,
+        "frames_vistos": 733
+      },
+      "arbitro": {
+        "jogadores": 1,
+        "cobertura_media": 0.9853137516688919,
+        "presenca_media": 0.984,
+        "trocas": 1,
+        "frames_vistos": 738
+      }
+    },
+    "bola": {
+      "frames_vistos_bola": 485,
+      "presenca_bola": 0.6467,
+      "num_perdas_bola": 59,
+      "maior_falha_frames": 23,
+      "confianca_media_bola": 0.3685
+    }
+  },
+  {
+    "nome_teste": "YOLO26S_BoTSORT_HSV",
+    "video": "Bundesliga_Video_2.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26s.pt",
+    "tracker": "botsort",
+    "aparencia": "hsv",
+    "imgsz": 1280,
+    "fps_processamento": 1.3074858710475992,
+    "media_cobertura": 0.9706232014767904,
+    "media_presenca": 0.6139047619047618,
+    "total_trocas_tracker_id": 11,
+    "frames_por_troca_global": 68.18181818181819,
+    "trocas_por_1000_frames_global": 14.666666666666666,
+    "por_grupo": {
+      "time0": {
+        "jogadores": 10,
+        "cobertura_media": 0.9769214057801262,
+        "presenca_media": 0.5473333333333334,
+        "trocas": 7,
+        "frames_vistos": 4105
+      },
+      "time1": {
+        "jogadores": 9,
+        "cobertura_media": 0.9636155377642225,
+        "presenca_media": 0.6085925925925926,
+        "trocas": 4,
+        "frames_vistos": 4108
+      },
+      "goleiro_time1": {
+        "jogadores": 1,
+        "cobertura_media": 0.976,
+        "presenca_media": 0.976,
+        "trocas": 0,
+        "frames_vistos": 732
+      },
+      "arbitro": {
+        "jogadores": 1,
+        "cobertura_media": 0.9653333333333334,
+        "presenca_media": 0.9653333333333334,
+        "trocas": 0,
+        "frames_vistos": 724
+      }
+    },
+    "bola": {
+      "frames_vistos_bola": 485,
+      "presenca_bola": 0.6467,
+      "num_perdas_bola": 59,
+      "maior_falha_frames": 23,
+      "confianca_media_bola": 0.3685
+    }
+  },
+  {
+    "nome_teste": "YOLO26S_ByteTrack_HSVKMeansDuplo",
+    "video": "Bundesliga_Video_2.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26s.pt",
+    "tracker": "bytetrack",
+    "aparencia": "kmeans_hsv",
+    "imgsz": 1280,
+    "fps_processamento": 2.767439248706077,
+    "media_cobertura": 0.9557806410009149,
+    "media_presenca": 0.9511111111111109,
+    "total_trocas_tracker_id": 48,
+    "frames_por_troca_global": 15.625,
+    "trocas_por_1000_frames_global": 64.0,
+    "por_grupo": {
+      "time0": {
+        "jogadores": 10,
+        "cobertura_media": 0.9647016304055211,
+        "presenca_media": 0.9571999999999999,
+        "trocas": 20,
+        "frames_vistos": 7179
+      },
+      "time1": {
+        "jogadores": 9,
+        "cobertura_media": 0.9400472467832722,
+        "presenca_media": 0.9377777777777777,
+        "trocas": 27,
+        "frames_vistos": 6330
+      },
+      "goleiro_time1": {
+        "jogadores": 1,
+        "cobertura_media": 0.9786381842456608,
+        "presenca_media": 0.9773333333333334,
+        "trocas": 0,
+        "frames_vistos": 733
+      },
+      "arbitro": {
+        "jogadores": 1,
+        "cobertura_media": 0.9853137516688919,
+        "presenca_media": 0.984,
+        "trocas": 1,
+        "frames_vistos": 738
+      }
+    },
+    "bola": {
+      "frames_vistos_bola": 485,
+      "presenca_bola": 0.6467,
+      "num_perdas_bola": 59,
+      "maior_falha_frames": 23,
+      "confianca_media_bola": 0.3685
+    }
+  },
+  {
+    "nome_teste": "YOLO26S_ByteTrack_MobileNet",
+    "video": "Bundesliga_Video_2.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26s.pt",
+    "tracker": "bytetrack",
+    "aparencia": "mobilenet",
+    "imgsz": 1280,
+    "fps_processamento": 2.6530054119639526,
+    "media_cobertura": 0.9557806410009149,
+    "media_presenca": 0.9511111111111109,
+    "total_trocas_tracker_id": 48,
+    "frames_por_troca_global": 15.625,
+    "trocas_por_1000_frames_global": 64.0,
+    "por_grupo": {
+      "time0": {
+        "jogadores": 10,
+        "cobertura_media": 0.9647016304055211,
+        "presenca_media": 0.9571999999999999,
+        "trocas": 20,
+        "frames_vistos": 7179
+      },
+      "time1": {
+        "jogadores": 9,
+        "cobertura_media": 0.9400472467832722,
+        "presenca_media": 0.9377777777777777,
+        "trocas": 27,
+        "frames_vistos": 6330
+      },
+      "goleiro_time1": {
+        "jogadores": 1,
+        "cobertura_media": 0.9786381842456608,
+        "presenca_media": 0.9773333333333334,
+        "trocas": 0,
+        "frames_vistos": 733
+      },
+      "arbitro": {
+        "jogadores": 1,
+        "cobertura_media": 0.9853137516688919,
+        "presenca_media": 0.984,
+        "trocas": 1,
+        "frames_vistos": 738
+      }
+    },
+    "bola": {
+      "frames_vistos_bola": 485,
+      "presenca_bola": 0.6467,
+      "num_perdas_bola": 59,
+      "maior_falha_frames": 23,
+      "confianca_media_bola": 0.3685
+    }
+  },
+  {
+    "nome_teste": "YOLO26M_ByteTrack_HSV",
+    "video": "Video_teste.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26m.pt",
+    "tracker": "bytetrack",
+    "aparencia": "hsv",
+    "imgsz": 1280,
+    "fps_processamento": 1.2364739749601807,
+    "media_cobertura": 0.9689657794676807,
+    "media_presenca": 0.967300380228137,
+    "total_trocas_tracker_id": 20,
+    "frames_por_troca_global": 26.3,
+    "trocas_por_1000_frames_global": 38.02281368821293,
+    "por_grupo": {
+      "time0": {
+        "jogadores": 5,
+        "cobertura_media": 0.984,
+        "presenca_media": 0.98212927756654,
+        "trocas": 4,
+        "frames_vistos": 2583
+      },
+      "time1": {
+        "jogadores": 4,
+        "cobertura_media": 0.9509858772406301,
+        "presenca_media": 0.9496197718631179,
+        "trocas": 10,
+        "frames_vistos": 1998
+      },
+      "goleiro_time1": {
+        "jogadores": 1,
+        "cobertura_media": 0.9657142857142857,
+        "presenca_media": 0.9638783269961977,
+        "trocas": 6,
+        "frames_vistos": 507
+      }
+    },
+    "bola": {
+      "frames_vistos_bola": 266,
+      "presenca_bola": 0.5057,
+      "num_perdas_bola": 39,
+      "maior_falha_frames": 43,
+      "confianca_media_bola": 0.411
+    }
+  },
+  {
+    "nome_teste": "YOLO26M_BoTSORT_HSV",
+    "video": "Video_teste.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26m.pt",
+    "tracker": "botsort",
+    "aparencia": "hsv",
+    "imgsz": 1280,
+    "fps_processamento": 0.6106253281664219,
+    "media_cobertura": 0.9809554873588262,
+    "media_presenca": 0.8022813688212928,
+    "total_trocas_tracker_id": 5,
+    "frames_por_troca_global": 105.2,
+    "trocas_por_1000_frames_global": 9.505703422053232,
+    "por_grupo": {
+      "time0": {
+        "jogadores": 5,
+        "cobertura_media": 0.9828897338403042,
+        "presenca_media": 0.9828897338403042,
+        "trocas": 2,
+        "frames_vistos": 2585
+      },
+      "time1": {
+        "jogadores": 4,
+        "cobertura_media": 0.976628262123301,
+        "presenca_media": 0.5299429657794678,
+        "trocas": 0,
+        "frames_vistos": 1115
+      },
+      "goleiro_time1": {
+        "jogadores": 1,
+        "cobertura_media": 0.9885931558935361,
+        "presenca_media": 0.9885931558935361,
+        "trocas": 3,
+        "frames_vistos": 520
+      }
+    },
+    "bola": {
+      "frames_vistos_bola": 266,
+      "presenca_bola": 0.5057,
+      "num_perdas_bola": 39,
+      "maior_falha_frames": 43,
+      "confianca_media_bola": 0.411
+    }
+  },
+  {
+    "nome_teste": "YOLO26M_ByteTrack_HSVKMeansDuplo",
+    "video": "Video_teste.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26m.pt",
+    "tracker": "bytetrack",
+    "aparencia": "kmeans_hsv",
+    "imgsz": 1280,
+    "fps_processamento": 1.2097839681207059,
+    "media_cobertura": 0.9689657794676807,
+    "media_presenca": 0.967300380228137,
+    "total_trocas_tracker_id": 20,
+    "frames_por_troca_global": 26.3,
+    "trocas_por_1000_frames_global": 38.02281368821293,
+    "por_grupo": {
+      "time0": {
+        "jogadores": 5,
+        "cobertura_media": 0.984,
+        "presenca_media": 0.98212927756654,
+        "trocas": 4,
+        "frames_vistos": 2583
+      },
+      "time1": {
+        "jogadores": 4,
+        "cobertura_media": 0.9509858772406301,
+        "presenca_media": 0.9496197718631179,
+        "trocas": 10,
+        "frames_vistos": 1998
+      },
+      "goleiro_time1": {
+        "jogadores": 1,
+        "cobertura_media": 0.9657142857142857,
+        "presenca_media": 0.9638783269961977,
+        "trocas": 6,
+        "frames_vistos": 507
+      }
+    },
+    "bola": {
+      "frames_vistos_bola": 266,
+      "presenca_bola": 0.5057,
+      "num_perdas_bola": 39,
+      "maior_falha_frames": 43,
+      "confianca_media_bola": 0.411
+    }
+  },
+  {
+    "nome_teste": "YOLO26M_ByteTrack_MobileNet",
+    "video": "Video_teste.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26m.pt",
+    "tracker": "bytetrack",
+    "aparencia": "mobilenet",
+    "imgsz": 1280,
+    "fps_processamento": 1.26081841030915,
+    "media_cobertura": 0.9689657794676807,
+    "media_presenca": 0.967300380228137,
+    "total_trocas_tracker_id": 20,
+    "frames_por_troca_global": 26.3,
+    "trocas_por_1000_frames_global": 38.02281368821293,
+    "por_grupo": {
+      "time0": {
+        "jogadores": 5,
+        "cobertura_media": 0.984,
+        "presenca_media": 0.98212927756654,
+        "trocas": 4,
+        "frames_vistos": 2583
+      },
+      "time1": {
+        "jogadores": 4,
+        "cobertura_media": 0.9509858772406301,
+        "presenca_media": 0.9496197718631179,
+        "trocas": 10,
+        "frames_vistos": 1998
+      },
+      "goleiro_time1": {
+        "jogadores": 1,
+        "cobertura_media": 0.9657142857142857,
+        "presenca_media": 0.9638783269961977,
+        "trocas": 6,
+        "frames_vistos": 507
+      }
+    },
+    "bola": {
+      "frames_vistos_bola": 266,
+      "presenca_bola": 0.5057,
+      "num_perdas_bola": 39,
+      "maior_falha_frames": 43,
+      "confianca_media_bola": 0.411
+    }
+  }
+=======
+[
+  {
+    "nome_teste": "YOLO_CPU_HSV",
+    "erro": "list indices must be integers or slices, not str",
+    "detector": "yolo",
+    "opcao_aparencia": "hsv"
+  },
+  {
+    "nome_teste": "YOLO_CPU_SEM_APARENCIA",
+    "video": "Bundesliga_Video_2.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26s.pt",
+    "opcao_aparencia": "none",
+    "imgsz": 640,
+    "fps_processamento": 8.605635165521232,
+    "media_cobertura_no_periodo": 0.9619235781103009,
+    "media_presenca_no_video": 0.9319999999999999,
+    "total_trocas_tracker_id": 55
+  },
+  {
+    "nome_teste": "YOLO_CPU_EMBEDDINGS",
+    "erro": "list indices must be integers or slices, not str",
+    "detector": "yolo",
+    "opcao_aparencia": "embeddings"
+  },
+  {
+    "nome_teste": "YOLO_CPU_HSV_AUTO",
+    "video": "Bundesliga_Video_2.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26s.pt",
+    "opcao_aparencia": "hsv",
+    "imgsz": "auto",
+    "fps_processamento": 2.871296925346469,
+    "media_cobertura_no_periodo": 1.0,
+    "media_presenca_no_video": 0.9985925925925925,
+    "total_trocas_tracker_id": 116
+  },
+  {
+    "nome_teste": "YOLO26S_COCO_HSV_AUTO",
+    "video": "Bundesliga_Video_2.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26s.pt",
+    "opcao_aparencia": "hsv",
+    "imgsz": "auto",
+    "fps_processamento": 3.13,
+    "media_cobertura": 1.0,
+    "media_presenca": 0.9985,
+    "total_trocas_tracker_id": 121
+  },
+  {
+    "nome_teste": "YOLO26S_COCO_HSV_640",
+    "video": "Bundesliga_Video_2.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26s.pt",
+    "opcao_aparencia": "hsv",
+    "imgsz": 640,
+    "fps_processamento": 9.72,
+    "media_cobertura": 0.9411,
+    "media_presenca": 0.904,
+    "total_trocas_tracker_id": 47
+  },
+  {
+    "nome_teste": "YOLO26S_COCO_SEM_APARENCIA_640",
+    "video": "Bundesliga_Video_2.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26s.pt",
+    "opcao_aparencia": "none",
+    "imgsz": 640,
+    "fps_processamento": 10.07,
+    "media_cobertura": 0.9411,
+    "media_presenca": 0.904,
+    "total_trocas_tracker_id": 47
+  },
+  {
+    "nome_teste": "YOLO26S_COCO_EMBEDDINGS_AUTO",
+    "erro": "shapes (768,) and (34,) not aligned: 768 (dim 0) != 34 (dim 0)",
+    "detector": "yolo",
+    "video": "Bundesliga_Video_2.mp4"
+  },
+  {
+    "nome_teste": "YOLO26M_COCO_HSV_AUTO",
+    "video": "Bundesliga_Video_2.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26m.pt",
+    "tracker": "bytetrack",
+    "opcao_aparencia": "hsv",
+    "imgsz": "auto",
+    "fps_processamento": 1.26,
+    "media_cobertura_geral": 0.9863,
+    "total_trocas_tracker_id": 16,
+    "por_grupo": {
+      "time0": {
+        "jogadores": 10,
+        "media_cobertura": 0.9829,
+        "trocas": 12
+      },
+      "time1": {
+        "jogadores": 9,
+        "media_cobertura": 0.9875,
+        "trocas": 4
+      },
+      "goleiro_time1": {
+        "jogadores": 1,
+        "media_cobertura": 0.9986,
+        "trocas": 0
+      },
+      "arbitro": {
+        "jogadores": 1,
+        "media_cobertura": 0.996,
+        "trocas": 0
+      }
+    },
+    "bola": {
+      "frames_vistos_bola": 695,
+      "presenca_bola": 0.9267,
+      "num_perdas_bola": 23,
+      "maior_falha_frames": 7
+    }
+  },
+  {
+    "nome_teste": "YOLO26M_COCO_HSV_640",
+    "video": "Bundesliga_Video_2.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26m.pt",
+    "tracker": "bytetrack",
+    "opcao_aparencia": "hsv",
+    "imgsz": 640,
+    "fps_processamento": 4.03,
+    "media_cobertura_geral": 0.9346,
+    "total_trocas_tracker_id": 35,
+    "por_grupo": {
+      "time0": {
+        "jogadores": 10,
+        "media_cobertura": 0.9419,
+        "trocas": 20
+      },
+      "time1": {
+        "jogadores": 9,
+        "media_cobertura": 0.9437,
+        "trocas": 12
+      },
+      "goleiro_time1": {
+        "jogadores": 1,
+        "media_cobertura": 0.745,
+        "trocas": 1
+      },
+      "arbitro": {
+        "jogadores": 1,
+        "media_cobertura": 0.969,
+        "trocas": 2
+      }
+    },
+    "bola": {
+      "frames_vistos_bola": 443,
+      "presenca_bola": 0.5907,
+      "num_perdas_bola": 65,
+      "maior_falha_frames": 36
+    }
+  },
+  {
+    "nome_teste": "YOLO26M_COCO_SEM_APARENCIA_640",
+    "video": "Bundesliga_Video_2.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26m.pt",
+    "tracker": "bytetrack",
+    "opcao_aparencia": "none",
+    "imgsz": 640,
+    "fps_processamento": 3.85,
+    "media_cobertura_geral": 0.9346,
+    "total_trocas_tracker_id": 35,
+    "por_grupo": {
+      "time0": {
+        "jogadores": 10,
+        "media_cobertura": 0.9419,
+        "trocas": 20
+      },
+      "time1": {
+        "jogadores": 9,
+        "media_cobertura": 0.9437,
+        "trocas": 12
+      },
+      "goleiro_time1": {
+        "jogadores": 1,
+        "media_cobertura": 0.745,
+        "trocas": 1
+      },
+      "arbitro": {
+        "jogadores": 1,
+        "media_cobertura": 0.969,
+        "trocas": 2
+      }
+    },
+    "bola": {
+      "frames_vistos_bola": 443,
+      "presenca_bola": 0.5907,
+      "num_perdas_bola": 65,
+      "maior_falha_frames": 36
+    }
+  },
+  {
+    "nome_teste": "YOLO26M_COCO_SEM_APARENCIA_AUTO",
+    "video": "Bundesliga_Video_2.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26m.pt",
+    "tracker": "bytetrack",
+    "opcao_aparencia": "none",
+    "imgsz": "auto",
+    "fps_processamento": 1.19,
+    "media_cobertura_geral": 0.9863,
+    "total_trocas_tracker_id": 16,
+    "por_grupo": {
+      "time0": {
+        "jogadores": 10,
+        "media_cobertura": 0.9829,
+        "trocas": 12
+      },
+      "time1": {
+        "jogadores": 9,
+        "media_cobertura": 0.9875,
+        "trocas": 4
+      },
+      "goleiro_time1": {
+        "jogadores": 1,
+        "media_cobertura": 0.9986,
+        "trocas": 0
+      },
+      "arbitro": {
+        "jogadores": 1,
+        "media_cobertura": 0.996,
+        "trocas": 0
+      }
+    },
+    "bola": {
+      "frames_vistos_bola": 695,
+      "presenca_bola": 0.9267,
+      "num_perdas_bola": 23,
+      "maior_falha_frames": 7
+    }
+  },
+  {
+    "nome_teste": "YOLO26M_COCO_EMBEDDINGS_AUTO",
+    "erro": "shapes (768,) and (34,) not aligned: 768 (dim 0) != 34 (dim 0)",
+    "detector": "yolo",
+    "video": "Bundesliga_Video_2.mp4"
+  },
+  {
+    "nome_teste": "YOLO26S_COCO_HSV_1280",
+    "video": "Bundesliga_Video_2.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26s.pt",
+    "aparencia": "hsv",
+    "imgsz": 1280,
+    "fps_processamento": 2.718230495517689,
+    "media_cobertura": 0.999156581541306,
+    "media_presenca": 0.9976140350877194,
+    "total_trocas_tracker_id": 185,
+    "frames_por_troca_global": 4.054054054054054,
+    "trocas_por_1000_frames_global": 246.66666666666666,
+    "por_time": {
+      "1": {
+        "jogadores": 10,
+        "cobertura_media": 0.999465953176301,
+        "presenca_media": 0.998,
+        "trocas": 86,
+        "frames_vistos": 7485
+      },
+      "2": {
+        "jogadores": 9,
+        "cobertura_media": 0.9988128352802002,
+        "presenca_media": 0.9971851851851853,
+        "trocas": 99,
+        "frames_vistos": 6731
+      }
+    }
+  },
+  {
+    "nome_teste": "YOLO26S_COCO_SEM_APARENCIA_1280",
+    "video": "Bundesliga_Video_2.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26s.pt",
+    "aparencia": "none",
+    "imgsz": 1280,
+    "fps_processamento": 2.8665193468473147,
+    "media_cobertura": 0.999156581541306,
+    "media_presenca": 0.9976140350877194,
+    "total_trocas_tracker_id": 185,
+    "frames_por_troca_global": 4.054054054054054,
+    "trocas_por_1000_frames_global": 246.66666666666666,
+    "por_time": {
+      "1": {
+        "jogadores": 10,
+        "cobertura_media": 0.999465953176301,
+        "presenca_media": 0.998,
+        "trocas": 86,
+        "frames_vistos": 7485
+      },
+      "2": {
+        "jogadores": 9,
+        "cobertura_media": 0.9988128352802002,
+        "presenca_media": 0.9971851851851853,
+        "trocas": 99,
+        "frames_vistos": 6731
+      }
+    }
+  },
+  {
+    "nome_teste": "YOLO26S_COCO_EMBEDDINGS_1280",
+    "erro": "shapes (768,) and (34,) not aligned: 768 (dim 0) != 34 (dim 0)"
+  },
+  {
+    "nome_teste": "YOLO26S_ByteTrack_HSV",
+    "video": "Bundesliga_Video_2.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26s.pt",
+    "tracker": "bytetrack",
+    "aparencia": "hsv",
+    "imgsz": 1280,
+    "fps_processamento": 2.5834992297878534,
+    "media_cobertura": 0.9557806410009149,
+    "media_presenca": 0.9511111111111109,
+    "total_trocas_tracker_id": 48,
+    "frames_por_troca_global": 15.625,
+    "trocas_por_1000_frames_global": 64.0,
+    "por_grupo": {
+      "time0": {
+        "jogadores": 10,
+        "cobertura_media": 0.9647016304055211,
+        "presenca_media": 0.9571999999999999,
+        "trocas": 20,
+        "frames_vistos": 7179
+      },
+      "time1": {
+        "jogadores": 9,
+        "cobertura_media": 0.9400472467832722,
+        "presenca_media": 0.9377777777777777,
+        "trocas": 27,
+        "frames_vistos": 6330
+      },
+      "goleiro_time1": {
+        "jogadores": 1,
+        "cobertura_media": 0.9786381842456608,
+        "presenca_media": 0.9773333333333334,
+        "trocas": 0,
+        "frames_vistos": 733
+      },
+      "arbitro": {
+        "jogadores": 1,
+        "cobertura_media": 0.9853137516688919,
+        "presenca_media": 0.984,
+        "trocas": 1,
+        "frames_vistos": 738
+      }
+    },
+    "bola": {
+      "frames_vistos_bola": 485,
+      "presenca_bola": 0.6467,
+      "num_perdas_bola": 59,
+      "maior_falha_frames": 23,
+      "confianca_media_bola": 0.3685
+    }
+  },
+  {
+    "nome_teste": "YOLO26S_BoTSORT_HSV",
+    "video": "Bundesliga_Video_2.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26s.pt",
+    "tracker": "botsort",
+    "aparencia": "hsv",
+    "imgsz": 1280,
+    "fps_processamento": 1.3074858710475992,
+    "media_cobertura": 0.9706232014767904,
+    "media_presenca": 0.6139047619047618,
+    "total_trocas_tracker_id": 11,
+    "frames_por_troca_global": 68.18181818181819,
+    "trocas_por_1000_frames_global": 14.666666666666666,
+    "por_grupo": {
+      "time0": {
+        "jogadores": 10,
+        "cobertura_media": 0.9769214057801262,
+        "presenca_media": 0.5473333333333334,
+        "trocas": 7,
+        "frames_vistos": 4105
+      },
+      "time1": {
+        "jogadores": 9,
+        "cobertura_media": 0.9636155377642225,
+        "presenca_media": 0.6085925925925926,
+        "trocas": 4,
+        "frames_vistos": 4108
+      },
+      "goleiro_time1": {
+        "jogadores": 1,
+        "cobertura_media": 0.976,
+        "presenca_media": 0.976,
+        "trocas": 0,
+        "frames_vistos": 732
+      },
+      "arbitro": {
+        "jogadores": 1,
+        "cobertura_media": 0.9653333333333334,
+        "presenca_media": 0.9653333333333334,
+        "trocas": 0,
+        "frames_vistos": 724
+      }
+    },
+    "bola": {
+      "frames_vistos_bola": 485,
+      "presenca_bola": 0.6467,
+      "num_perdas_bola": 59,
+      "maior_falha_frames": 23,
+      "confianca_media_bola": 0.3685
+    }
+  },
+  {
+    "nome_teste": "YOLO26S_ByteTrack_HSVKMeansDuplo",
+    "video": "Bundesliga_Video_2.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26s.pt",
+    "tracker": "bytetrack",
+    "aparencia": "kmeans_hsv",
+    "imgsz": 1280,
+    "fps_processamento": 2.767439248706077,
+    "media_cobertura": 0.9557806410009149,
+    "media_presenca": 0.9511111111111109,
+    "total_trocas_tracker_id": 48,
+    "frames_por_troca_global": 15.625,
+    "trocas_por_1000_frames_global": 64.0,
+    "por_grupo": {
+      "time0": {
+        "jogadores": 10,
+        "cobertura_media": 0.9647016304055211,
+        "presenca_media": 0.9571999999999999,
+        "trocas": 20,
+        "frames_vistos": 7179
+      },
+      "time1": {
+        "jogadores": 9,
+        "cobertura_media": 0.9400472467832722,
+        "presenca_media": 0.9377777777777777,
+        "trocas": 27,
+        "frames_vistos": 6330
+      },
+      "goleiro_time1": {
+        "jogadores": 1,
+        "cobertura_media": 0.9786381842456608,
+        "presenca_media": 0.9773333333333334,
+        "trocas": 0,
+        "frames_vistos": 733
+      },
+      "arbitro": {
+        "jogadores": 1,
+        "cobertura_media": 0.9853137516688919,
+        "presenca_media": 0.984,
+        "trocas": 1,
+        "frames_vistos": 738
+      }
+    },
+    "bola": {
+      "frames_vistos_bola": 485,
+      "presenca_bola": 0.6467,
+      "num_perdas_bola": 59,
+      "maior_falha_frames": 23,
+      "confianca_media_bola": 0.3685
+    }
+  },
+  {
+    "nome_teste": "YOLO26S_ByteTrack_MobileNet",
+    "video": "Bundesliga_Video_2.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26s.pt",
+    "tracker": "bytetrack",
+    "aparencia": "mobilenet",
+    "imgsz": 1280,
+    "fps_processamento": 2.6530054119639526,
+    "media_cobertura": 0.9557806410009149,
+    "media_presenca": 0.9511111111111109,
+    "total_trocas_tracker_id": 48,
+    "frames_por_troca_global": 15.625,
+    "trocas_por_1000_frames_global": 64.0,
+    "por_grupo": {
+      "time0": {
+        "jogadores": 10,
+        "cobertura_media": 0.9647016304055211,
+        "presenca_media": 0.9571999999999999,
+        "trocas": 20,
+        "frames_vistos": 7179
+      },
+      "time1": {
+        "jogadores": 9,
+        "cobertura_media": 0.9400472467832722,
+        "presenca_media": 0.9377777777777777,
+        "trocas": 27,
+        "frames_vistos": 6330
+      },
+      "goleiro_time1": {
+        "jogadores": 1,
+        "cobertura_media": 0.9786381842456608,
+        "presenca_media": 0.9773333333333334,
+        "trocas": 0,
+        "frames_vistos": 733
+      },
+      "arbitro": {
+        "jogadores": 1,
+        "cobertura_media": 0.9853137516688919,
+        "presenca_media": 0.984,
+        "trocas": 1,
+        "frames_vistos": 738
+      }
+    },
+    "bola": {
+      "frames_vistos_bola": 485,
+      "presenca_bola": 0.6467,
+      "num_perdas_bola": 59,
+      "maior_falha_frames": 23,
+      "confianca_media_bola": 0.3685
+    }
+  },
+  {
+    "nome_teste": "YOLO26M_ByteTrack_HSV",
+    "video": "Video_teste.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26m.pt",
+    "tracker": "bytetrack",
+    "aparencia": "hsv",
+    "imgsz": 1280,
+    "fps_processamento": 1.2364739749601807,
+    "media_cobertura": 0.9689657794676807,
+    "media_presenca": 0.967300380228137,
+    "total_trocas_tracker_id": 20,
+    "frames_por_troca_global": 26.3,
+    "trocas_por_1000_frames_global": 38.02281368821293,
+    "por_grupo": {
+      "time0": {
+        "jogadores": 5,
+        "cobertura_media": 0.984,
+        "presenca_media": 0.98212927756654,
+        "trocas": 4,
+        "frames_vistos": 2583
+      },
+      "time1": {
+        "jogadores": 4,
+        "cobertura_media": 0.9509858772406301,
+        "presenca_media": 0.9496197718631179,
+        "trocas": 10,
+        "frames_vistos": 1998
+      },
+      "goleiro_time1": {
+        "jogadores": 1,
+        "cobertura_media": 0.9657142857142857,
+        "presenca_media": 0.9638783269961977,
+        "trocas": 6,
+        "frames_vistos": 507
+      }
+    },
+    "bola": {
+      "frames_vistos_bola": 266,
+      "presenca_bola": 0.5057,
+      "num_perdas_bola": 39,
+      "maior_falha_frames": 43,
+      "confianca_media_bola": 0.411
+    }
+  },
+  {
+    "nome_teste": "YOLO26M_BoTSORT_HSV",
+    "video": "Video_teste.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26m.pt",
+    "tracker": "botsort",
+    "aparencia": "hsv",
+    "imgsz": 1280,
+    "fps_processamento": 0.6106253281664219,
+    "media_cobertura": 0.9809554873588262,
+    "media_presenca": 0.8022813688212928,
+    "total_trocas_tracker_id": 5,
+    "frames_por_troca_global": 105.2,
+    "trocas_por_1000_frames_global": 9.505703422053232,
+    "por_grupo": {
+      "time0": {
+        "jogadores": 5,
+        "cobertura_media": 0.9828897338403042,
+        "presenca_media": 0.9828897338403042,
+        "trocas": 2,
+        "frames_vistos": 2585
+      },
+      "time1": {
+        "jogadores": 4,
+        "cobertura_media": 0.976628262123301,
+        "presenca_media": 0.5299429657794678,
+        "trocas": 0,
+        "frames_vistos": 1115
+      },
+      "goleiro_time1": {
+        "jogadores": 1,
+        "cobertura_media": 0.9885931558935361,
+        "presenca_media": 0.9885931558935361,
+        "trocas": 3,
+        "frames_vistos": 520
+      }
+    },
+    "bola": {
+      "frames_vistos_bola": 266,
+      "presenca_bola": 0.5057,
+      "num_perdas_bola": 39,
+      "maior_falha_frames": 43,
+      "confianca_media_bola": 0.411
+    }
+  },
+  {
+    "nome_teste": "YOLO26M_ByteTrack_HSVKMeansDuplo",
+    "video": "Video_teste.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26m.pt",
+    "tracker": "bytetrack",
+    "aparencia": "kmeans_hsv",
+    "imgsz": 1280,
+    "fps_processamento": 1.2097839681207059,
+    "media_cobertura": 0.9689657794676807,
+    "media_presenca": 0.967300380228137,
+    "total_trocas_tracker_id": 20,
+    "frames_por_troca_global": 26.3,
+    "trocas_por_1000_frames_global": 38.02281368821293,
+    "por_grupo": {
+      "time0": {
+        "jogadores": 5,
+        "cobertura_media": 0.984,
+        "presenca_media": 0.98212927756654,
+        "trocas": 4,
+        "frames_vistos": 2583
+      },
+      "time1": {
+        "jogadores": 4,
+        "cobertura_media": 0.9509858772406301,
+        "presenca_media": 0.9496197718631179,
+        "trocas": 10,
+        "frames_vistos": 1998
+      },
+      "goleiro_time1": {
+        "jogadores": 1,
+        "cobertura_media": 0.9657142857142857,
+        "presenca_media": 0.9638783269961977,
+        "trocas": 6,
+        "frames_vistos": 507
+      }
+    },
+    "bola": {
+      "frames_vistos_bola": 266,
+      "presenca_bola": 0.5057,
+      "num_perdas_bola": 39,
+      "maior_falha_frames": 43,
+      "confianca_media_bola": 0.411
+    }
+  },
+  {
+    "nome_teste": "YOLO26M_ByteTrack_MobileNet",
+    "video": "Video_teste.mp4",
+    "detector": "yolo",
+    "modelo_usado": "yolo26m.pt",
+    "tracker": "bytetrack",
+    "aparencia": "mobilenet",
+    "imgsz": 1280,
+    "fps_processamento": 1.26081841030915,
+    "media_cobertura": 0.9689657794676807,
+    "media_presenca": 0.967300380228137,
+    "total_trocas_tracker_id": 20,
+    "frames_por_troca_global": 26.3,
+    "trocas_por_1000_frames_global": 38.02281368821293,
+    "por_grupo": {
+      "time0": {
+        "jogadores": 5,
+        "cobertura_media": 0.984,
+        "presenca_media": 0.98212927756654,
+        "trocas": 4,
+        "frames_vistos": 2583
+      },
+      "time1": {
+        "jogadores": 4,
+        "cobertura_media": 0.9509858772406301,
+        "presenca_media": 0.9496197718631179,
+        "trocas": 10,
+        "frames_vistos": 1998
+      },
+      "goleiro_time1": {
+        "jogadores": 1,
+        "cobertura_media": 0.9657142857142857,
+        "presenca_media": 0.9638783269961977,
+        "trocas": 6,
+        "frames_vistos": 507
+      }
+    },
+    "bola": {
+      "frames_vistos_bola": 266,
+      "presenca_bola": 0.5057,
+      "num_perdas_bola": 39,
+      "maior_falha_frames": 43,
+      "confianca_media_bola": 0.411
+    }
+  }
+>>>>>>> 4dc20829d235225851d5c4a93b2901c22a9453e9
+]

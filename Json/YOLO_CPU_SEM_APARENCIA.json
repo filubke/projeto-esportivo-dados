@@ -1,0 +1,26 @@
+<<<<<<< HEAD
+{
+  "nome_teste": "YOLO_CPU_SEM_APARENCIA",
+  "video": "Bundesliga_Video_2.mp4",
+  "detector": "yolo",
+  "modelo_usado": "yolo26s.pt",
+  "opcao_aparencia": "none",
+  "imgsz": 640,
+  "fps_processamento": 8.605635165521232,
+  "media_cobertura_no_periodo": 0.9619235781103009,
+  "media_presenca_no_video": 0.9319999999999999,
+  "total_trocas_tracker_id": 55
+=======
+{
+  "nome_teste": "YOLO_CPU_SEM_APARENCIA",
+  "video": "Bundesliga_Video_2.mp4",
+  "detector": "yolo",
+  "modelo_usado": "yolo26s.pt",
+  "opcao_aparencia": "none",
+  "imgsz": 640,
+  "fps_processamento": 8.605635165521232,
+  "media_cobertura_no_periodo": 0.9619235781103009,
+  "media_presenca_no_video": 0.9319999999999999,
+  "total_trocas_tracker_id": 55
+>>>>>>> 4dc20829d235225851d5c4a93b2901c22a9453e9
+}

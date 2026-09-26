@@ -1,0 +1,26 @@
+<<<<<<< HEAD
+{
+  "nome_teste": "YOLO26S_COCO_HSV_AUTO",
+  "video": "Bundesliga_Video_2.mp4",
+  "detector": "yolo",
+  "modelo_usado": "yolo26s.pt",
+  "opcao_aparencia": "hsv",
+  "imgsz": "auto",
+  "fps_processamento": 3.13,
+  "media_cobertura": 1.0,
+  "media_presenca": 0.9985,
+  "total_trocas_tracker_id": 121
+=======
+{
+  "nome_teste": "YOLO26S_COCO_HSV_AUTO",
+  "video": "Bundesliga_Video_2.mp4",
+  "detector": "yolo",
+  "modelo_usado": "yolo26s.pt",
+  "opcao_aparencia": "hsv",
+  "imgsz": "auto",
+  "fps_processamento": 3.13,
+  "media_cobertura": 1.0,
+  "media_presenca": 0.9985,
+  "total_trocas_tracker_id": 121
+>>>>>>> 4dc20829d235225851d5c4a93b2901c22a9453e9
+}

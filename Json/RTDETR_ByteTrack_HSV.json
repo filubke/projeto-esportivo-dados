@@ -1,0 +1,102 @@
+<<<<<<< HEAD
+{
+  "nome_teste": "RTDETR_ByteTrack_HSV",
+  "detector": "rtdetr",
+  "modelo_usado": "rtdetr-l.pt",
+  "tracker": "bytetrack",
+  "aparencia": "hsv",
+  "imgsz_config": 1280,
+  "imgsz": 1280,
+  "fps_processamento": 0.5092017260559146,
+  "media_cobertura": 0.9239387132923254,
+  "media_presenca": 0.9211026615969582,
+  "total_trocas_tracker_id": 89,
+  "frames_por_troca_global": 5.910112359550562,
+  "trocas_por_1000_frames_global": 169.20152091254752,
+  "por_grupo": {
+    "time0": {
+      "jogadores": 5,
+      "cobertura_media": 0.9375238095238096,
+      "presenca_media": 0.9357414448669201,
+      "trocas": 33,
+      "frames_vistos": 2461
+    },
+    "time1": {
+      "jogadores": 4,
+      "cobertura_media": 0.9269896403736708,
+      "presenca_media": 0.9225285171102662,
+      "trocas": 39,
+      "frames_vistos": 1941
+    },
+    "goleiro_time1": {
+      "jogadores": 1,
+      "cobertura_media": 0.8438095238095238,
+      "presenca_media": 0.8422053231939164,
+      "trocas": 17,
+      "frames_vistos": 443
+    }
+  },
+  "bola": {
+    "frames_vistos_bola": 524,
+    "presenca_bola": 0.9962,
+    "num_perdas_bola": 1,
+    "maior_falha_frames": 2,
+    "confianca_media_bola": 0.4529
+  },
+  "confiabilidade_time": {
+    "margem_media_geral": 0.129,
+    "taxa_confirmacao_media": 0.9398,
+    "taxa_divergencia_media": 0.398
+  }
+=======
+{
+  "nome_teste": "RTDETR_ByteTrack_HSV",
+  "detector": "rtdetr",
+  "modelo_usado": "rtdetr-l.pt",
+  "tracker": "bytetrack",
+  "aparencia": "hsv",
+  "imgsz_config": 1280,
+  "imgsz": 1280,
+  "fps_processamento": 0.5092017260559146,
+  "media_cobertura": 0.9239387132923254,
+  "media_presenca": 0.9211026615969582,
+  "total_trocas_tracker_id": 89,
+  "frames_por_troca_global": 5.910112359550562,
+  "trocas_por_1000_frames_global": 169.20152091254752,
+  "por_grupo": {
+    "time0": {
+      "jogadores": 5,
+      "cobertura_media": 0.9375238095238096,
+      "presenca_media": 0.9357414448669201,
+      "trocas": 33,
+      "frames_vistos": 2461
+    },
+    "time1": {
+      "jogadores": 4,
+      "cobertura_media": 0.9269896403736708,
+      "presenca_media": 0.9225285171102662,
+      "trocas": 39,
+      "frames_vistos": 1941
+    },
+    "goleiro_time1": {
+      "jogadores": 1,
+      "cobertura_media": 0.8438095238095238,
+      "presenca_media": 0.8422053231939164,
+      "trocas": 17,
+      "frames_vistos": 443
+    }
+  },
+  "bola": {
+    "frames_vistos_bola": 524,
+    "presenca_bola": 0.9962,
+    "num_perdas_bola": 1,
+    "maior_falha_frames": 2,
+    "confianca_media_bola": 0.4529
+  },
+  "confiabilidade_time": {
+    "margem_media_geral": 0.129,
+    "taxa_confirmacao_media": 0.9398,
+    "taxa_divergencia_media": 0.398
+  }
+>>>>>>> 4dc20829d235225851d5c4a93b2901c22a9453e9
+}

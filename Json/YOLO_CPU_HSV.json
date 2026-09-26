@@ -1,0 +1,32 @@
+<<<<<<< HEAD
+{
+  "nome_teste": "YOLO_CPU_HSV",
+  "detector": "yolo",
+  "modelo_usado": "yolo26s.pt",
+  "opcao_aparencia": "hsv",
+  "opcao_tracker": "bytetrack",
+  "frames_processados": 750,
+  "tempo_processamento_segundos": 105.64290046691895,
+  "fps_processamento": 7.099388569275938,
+  "media_cobertura_no_periodo": 0.9799663539769609,
+  "media_presenca_no_video": 0.9516862745098038,
+  "total_trocas_tracker_id": 78,
+  "media_trocas_por_jogador": 4.588235294117647,
+  "video_saida": "E:\\Projeto\\Videos\\Saidas\\Bundesliga_Video_2_YOLO_CPU_HSV.mp4"
+=======
+{
+  "nome_teste": "YOLO_CPU_HSV",
+  "detector": "yolo",
+  "modelo_usado": "yolo26s.pt",
+  "opcao_aparencia": "hsv",
+  "opcao_tracker": "bytetrack",
+  "frames_processados": 750,
+  "tempo_processamento_segundos": 105.64290046691895,
+  "fps_processamento": 7.099388569275938,
+  "media_cobertura_no_periodo": 0.9799663539769609,
+  "media_presenca_no_video": 0.9516862745098038,
+  "total_trocas_tracker_id": 78,
+  "media_trocas_por_jogador": 4.588235294117647,
+  "video_saida": "E:\\Projeto\\Videos\\Saidas\\Bundesliga_Video_2_YOLO_CPU_HSV.mp4"
+>>>>>>> 4dc20829d235225851d5c4a93b2901c22a9453e9
+}

@@ -1,0 +1,92 @@
+<<<<<<< HEAD
+{
+  "nome_teste": "YOLO26M_ByteTrack_MobileNet",
+  "detector": "yolo",
+  "modelo_usado": "yolo26m.pt",
+  "tracker": "bytetrack",
+  "aparencia": "mobilenet",
+  "imgsz_config": 1280,
+  "imgsz": 1280,
+  "fps_processamento": 1.2381751196541315,
+  "media_cobertura": 0.9689657794676807,
+  "media_presenca": 0.967300380228137,
+  "total_trocas_tracker_id": 20,
+  "frames_por_troca_global": 26.3,
+  "trocas_por_1000_frames_global": 38.02281368821293,
+  "por_grupo": {
+    "time0": {
+      "jogadores": 5,
+      "cobertura_media": 0.984,
+      "presenca_media": 0.98212927756654,
+      "trocas": 4,
+      "frames_vistos": 2583
+    },
+    "time1": {
+      "jogadores": 4,
+      "cobertura_media": 0.9509858772406301,
+      "presenca_media": 0.9496197718631179,
+      "trocas": 10,
+      "frames_vistos": 1998
+    },
+    "goleiro_time1": {
+      "jogadores": 1,
+      "cobertura_media": 0.9657142857142857,
+      "presenca_media": 0.9638783269961977,
+      "trocas": 6,
+      "frames_vistos": 507
+    }
+  },
+  "bola": {
+    "frames_vistos_bola": 266,
+    "presenca_bola": 0.5057,
+    "num_perdas_bola": 39,
+    "maior_falha_frames": 43,
+    "confianca_media_bola": 0.411
+  }
+=======
+{
+  "nome_teste": "YOLO26M_ByteTrack_MobileNet",
+  "detector": "yolo",
+  "modelo_usado": "yolo26m.pt",
+  "tracker": "bytetrack",
+  "aparencia": "mobilenet",
+  "imgsz_config": 1280,
+  "imgsz": 1280,
+  "fps_processamento": 1.2381751196541315,
+  "media_cobertura": 0.9689657794676807,
+  "media_presenca": 0.967300380228137,
+  "total_trocas_tracker_id": 20,
+  "frames_por_troca_global": 26.3,
+  "trocas_por_1000_frames_global": 38.02281368821293,
+  "por_grupo": {
+    "time0": {
+      "jogadores": 5,
+      "cobertura_media": 0.984,
+      "presenca_media": 0.98212927756654,
+      "trocas": 4,
+      "frames_vistos": 2583
+    },
+    "time1": {
+      "jogadores": 4,
+      "cobertura_media": 0.9509858772406301,
+      "presenca_media": 0.9496197718631179,
+      "trocas": 10,
+      "frames_vistos": 1998
+    },
+    "goleiro_time1": {
+      "jogadores": 1,
+      "cobertura_media": 0.9657142857142857,
+      "presenca_media": 0.9638783269961977,
+      "trocas": 6,
+      "frames_vistos": 507
+    }
+  },
+  "bola": {
+    "frames_vistos_bola": 266,
+    "presenca_bola": 0.5057,
+    "num_perdas_bola": 39,
+    "maior_falha_frames": 43,
+    "confianca_media_bola": 0.411
+  }
+>>>>>>> 4dc20829d235225851d5c4a93b2901c22a9453e9
+}

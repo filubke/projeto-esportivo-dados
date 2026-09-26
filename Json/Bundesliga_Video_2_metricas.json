@@ -1,0 +1,34 @@
+<<<<<<< HEAD
+{
+  "video": "E:\\Projeto\\Videos\\Bundesliga_Video_2.mp4",
+  "total_frames_video": 750,
+  "fps_video": 25.0,
+  "duracao_video_segundos": 30.0,
+  "frames_processados": 750,
+  "tempo_processamento_segundos": 105.43527388572693,
+  "fps_processamento": 7.113368916866158,
+  "opcao_aparencia": "hsv",
+  "opcao_tracker": "bytetrack",
+  "media_cobertura_no_periodo": 0.9995294117647059,
+  "media_presenca_no_video": 0.9995294117647059,
+  "total_trocas_tracker_id": 235,
+  "media_trocas_por_jogador": 13.823529411764707,
+  "total_frames_associados": 12744
+=======
+{
+  "video": "E:\\Projeto\\Videos\\Bundesliga_Video_2.mp4",
+  "total_frames_video": 750,
+  "fps_video": 25.0,
+  "duracao_video_segundos": 30.0,
+  "frames_processados": 750,
+  "tempo_processamento_segundos": 105.43527388572693,
+  "fps_processamento": 7.113368916866158,
+  "opcao_aparencia": "hsv",
+  "opcao_tracker": "bytetrack",
+  "media_cobertura_no_periodo": 0.9995294117647059,
+  "media_presenca_no_video": 0.9995294117647059,
+  "total_trocas_tracker_id": 235,
+  "media_trocas_por_jogador": 13.823529411764707,
+  "total_frames_associados": 12744
+>>>>>>> 4dc20829d235225851d5c4a93b2901c22a9453e9
+}
