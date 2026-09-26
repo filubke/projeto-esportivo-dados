@@ -1,24 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Comparador de pipelines de tracking esportivo (times, goleiros, árbitro).
 
-Componentes plugáveis (basta adicionar entrada nos dicionários de fábrica):
-  Detectores:  yolo, rtdetr, rfdetr
-  Trackers:    bytetrack, botsort, ocsort, deepsort, strongsort, norfair
-  Aparência:   hsv, embeddings (SigLIP), dinov2, mobilenet, kmeans_hsv
-
-Papéis (roles) selecionáveis na etapa manual de referência:
-  Time 1, Time 2 (obrigatórios)
-  Goleiro T1, Goleiro T2, Árbitro (opcionais)
-  Excluir — descarta do pipeline gandulas/comissão técnica (opcional)
-
-Métricas cobrem jogadores de linha, goleiros e árbitro separadamente,
-além de presença/perda de detecção da bola (sem tracker_id).
-
-HTML: os resultados de execuções anteriores (resultados_comparacao.json)
-são sempre preservados — testes novos são ADICIONADOS à lista existente,
-nunca a sobrescrevem. Cada linha de detalhe abre logo abaixo da sua linha
-principal, não ao final da tabela.
-"""
 import sys
 import io
 if hasattr(sys.stdout, "buffer"):
@@ -49,7 +30,7 @@ CSV_DIR    = r"E:\Projeto\CSV"
 HTML_DIR   = r"E:\Projeto\HTML"
 JSON_DIR   = r"E:\Projeto\JSON"
 
-DEVICE = "gpu"  # "cpu" ou "gpu" (torch.device)
+DEVICE = "cpu" 
 PULAR_FRAMES     = 1
 FRAME_REFERENCIA = 0
 # Ajustados pelo notebook quando houver GPU disponível.
@@ -93,7 +74,7 @@ EXIBIR_PREVIEW = True
 PREVIEW_MODO = "local"
 PREVIEW_INTERVALO = 1
 
-MODELO_YOLO = r"E:\Projeto\Modelos\yolo26s.pt"
+MODELO_YOLO = r"E:\Projeto\Modelos\yolo26m.pt"
 MODELO_RTDETR_BOLA = r"E:\Projeto\Modelos\rtdetr-l.pt"
 CLASSE_BOLA_RTDETR = 32
 _CACHE_RTDETR_BOLA = {}
@@ -154,7 +135,7 @@ TESTES = [
     #     "classes": {"player": 0, "ball": 32, "goalkeeper": None, "referee": set()},
     # },
     {
-        "nome_teste": "YOLO26S_BOTSORT_HSV_1280", 
+        "nome_teste": "YOLO26M_BOTSORT_HSV_1280", 
         "detector": "yolo",
         "model_path": MODELO_YOLO,
         "rtdetr_bola_model_path": MODELO_RTDETR_BOLA, 
@@ -165,7 +146,7 @@ TESTES = [
         "classes": {"player": 0, "ball": 32, "goalkeeper": None, "referee": set()},
     },
     {
-        "nome_teste": "YOLO26S_BOTSORT_Siames_1280", 
+        "nome_teste": "YOLO26M_BOTSORT_Siames_1280", 
         "detector": "yolo",
         "model_path": MODELO_YOLO,
         "rtdetr_bola_model_path": MODELO_RTDETR_BOLA, 
