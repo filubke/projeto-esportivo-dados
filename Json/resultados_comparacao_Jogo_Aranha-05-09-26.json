@@ -399,41 +399,41 @@
     "modelo_bola_usado": "rtdetr-l.pt",
     "imgsz_config": 1280,
     "imgsz": 1280,
-    "fps_processamento": 1.1548459434610605,
-    "media_cobertura": 0.9872854680967029,
-    "media_presenca": 0.530952380952381,
+    "fps_processamento": 1.25626916632142,
+    "media_cobertura": 0.9870954193093727,
+    "media_presenca": 0.7574850299401198,
     "total_trocas_tracker_id": 2,
-    "frames_por_troca_global": 546.0,
-    "trocas_por_1000_frames_global": 1.8315018315018314,
+    "frames_por_troca_global": 250.5,
+    "trocas_por_1000_frames_global": 3.992015968063872,
     "por_grupo": {
       "time0": {
         "jogadores": 5,
-        "cobertura_media": 0.9875345887380729,
-        "presenca_media": 0.5915750915750915,
+        "cobertura_media": 0.9856575052854122,
+        "presenca_media": 0.8119760479041916,
         "trocas": 1,
-        "frames_vistos": 3230
+        "frames_vistos": 2034
       },
       "time1": {
         "jogadores": 4,
-        "cobertura_media": 0.986064036860001,
-        "presenca_media": 0.46291208791208793,
+        "cobertura_media": 0.9856666666666667,
+        "presenca_media": 0.6292415169660679,
         "trocas": 1,
-        "frames_vistos": 2022
+        "frames_vistos": 1261
       },
       "goleiro_time1": {
         "jogadores": 1,
-        "cobertura_media": 0.9909255898366606,
-        "presenca_media": 0.5,
+        "cobertura_media": 1.0,
+        "presenca_media": 0.998003992015968,
         "trocas": 0,
-        "frames_vistos": 546
+        "frames_vistos": 500
       }
     },
     "bola": {
-      "frames_vistos_bola": 598,
-      "presenca_bola": 0.5476,
-      "num_perdas_bola": 87,
-      "maior_falha_frames": 64,
-      "confianca_media_bola": 0.5351
+      "frames_vistos_bola": 359,
+      "presenca_bola": 0.7166,
+      "num_perdas_bola": 39,
+      "maior_falha_frames": 17,
+      "confianca_media_bola": 0.626
     },
     "diagnostico": {
       "frames_com_jogadores": 0,
@@ -446,12 +446,12 @@
       "tempo_deteccao_bola": 0.0,
       "tempo_aparencia": 0.0,
       "tempo_associacao": 0.0,
-      "tempo_total_loop": 940.1286772000167
+      "tempo_total_loop": 396.62325000007695
     },
     "confiabilidade_time": {
-      "margem_media_geral": 0.2065,
-      "taxa_confirmacao_media": 0.9921,
-      "taxa_divergencia_media": 0.1663
+      "margem_media_geral": 0.2074,
+      "taxa_confirmacao_media": 0.9912,
+      "taxa_divergencia_media": 0.1802
     }
   },
   {

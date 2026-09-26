@@ -26,7 +26,7 @@ from ultralytics import RTDETR
 # ============================================================
 # CONFIGURAÇÃO GERAL
 # ============================================================
-VIDEO_PATH = r"E:\Projeto\Videos\Video_teste.mp4"
+VIDEO_PATH = r"E:\Projeto\Videos\Jogo_Aranha-05-09-26.mp4"
 OUTPUT_DIR = r"E:\Projeto\Videos\Saidas"
 CSV_DIR    = r"E:\Projeto\CSV"
 HTML_DIR   = r"E:\Projeto\HTML"
@@ -38,7 +38,7 @@ FRAME_REFERENCIA = 0
 # Ajustados pelo notebook quando houver GPU disponível.
 HALF_INFERENCIA = False
 # Use um número para validar um clipe curto; None processa até o fim.
-MAX_FRAMES_PROCESSAMENTO = 1000
+MAX_FRAMES_PROCESSAMENTO = 500
 
 CONFIANCA_JOGADOR = 0.25
 CONFIANCA_BOLA    = 0.12
@@ -72,7 +72,7 @@ SALVAR_CSV_RESUMO    = True
 SALVAR_JSON_METRICAS = True
 SALVAR_VIDEO = True
 # Preview ao vivo: "local" usa cv2.imshow; "colab" atualiza a célula inline.
-EXIBIR_PREVIEW = True
+EXIBIR_PREVIEW = False
 PREVIEW_MODO = "local"
 PREVIEW_INTERVALO = 1
 
@@ -1676,7 +1676,10 @@ def executar_teste(config, refs, frame_referencia):
             if frame_num % max(1, PULAR_FRAMES) != 0:
                 continue
             processados += 1
-
+            
+            if MAX_FRAMES_PROCESSAMENTO is not None and processados > MAX_FRAMES_PROCESSAMENTO:
+                break
+            
             t_loop = perf_counter()
             
             jogadores, bola = detectar_e_trackear(detector, detector_bola_rtdetr, tracker_info, config, frame, largura, altura)

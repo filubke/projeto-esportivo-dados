@@ -9,3 +9,8 @@ Scripts/Detection_v2.py
 Scripts/Treinar.ipynb
 Scripts/tracking_auto_times_colab.ipynb
 !Videos/Saidas/output-Bundesliga_Video_1_v3.mp4
+!Videos/Saidas/output-Bundesliga_Video_2_v5.mp4
+!Videos/Saidas/output-Video_teste_embed.mp4
+!Videos/Saidas/output-Video_teste_v4.mp4
+!Videos/Saidas/video-YOLO26S_BOTSORT_Siames_1280.mp4
+!Videos/Saidas/video-YOLO26S_BOTSORT_HSV_1280.mp4
