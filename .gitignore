@@ -1,13 +1,22 @@
-Videos/Jogo_Aranha-05-09-26.mp4
+# --- Modelos e Datasets ---
 Modelos/yolo26x.pt
-Scripts/Desativados/
-Videos/Saidas/
 Dataset/
+
+# --- Scripts ---
+Scripts/Desativados/
 Scripts/Detection_Jupyter.py
 Scripts/pasted_content_4_auto_times.py
 Scripts/Detection_v2.py
 Scripts/Treinar.ipynb
 Scripts/tracking_auto_times_colab.ipynb
+
+# --- Vídeos ---
+Videos/Jogo_Aranha-05-09-26.mp4
+
+# Ignora tudo dentro de Videos/Saidas/
+Videos/Saidas/*
+
+# Abre exceção para os vídeos específicos que você QUER salvar
 !Videos/Saidas/output-Bundesliga_Video_1_v3.mp4
 !Videos/Saidas/output-Bundesliga_Video_2_v5.mp4
 !Videos/Saidas/output-Video_teste_embed.mp4
