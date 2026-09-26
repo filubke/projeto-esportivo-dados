@@ -1,0 +1,65 @@
+{
+  "nome_teste": "YOLO26M_BOTSORT_Siames_1280",
+  "detector": "yolo",
+  "modelo_usado": "yolo26s.pt",
+  "tracker": "botsort",
+  "aparencia": "siames",
+  "rtdetr_bola": false,
+  "modelo_bola_usado": "rtdetr-l.pt",
+  "imgsz_config": 1280,
+  "imgsz": 1280,
+  "fps_processamento": 1.367991062418289,
+  "media_cobertura": 0.9824290793873729,
+  "media_presenca": 0.5608391608391609,
+  "total_trocas_tracker_id": 0,
+  "frames_por_troca_global": null,
+  "trocas_por_1000_frames_global": 0.0,
+  "por_grupo": {
+    "time0": {
+      "jogadores": 5,
+      "cobertura_media": 0.9686802900955389,
+      "presenca_media": 0.5096903096903096,
+      "trocas": 0,
+      "frames_vistos": 2551
+    },
+    "time1": {
+      "jogadores": 4,
+      "cobertura_media": 0.9974909383898437,
+      "presenca_media": 0.6286213786213787,
+      "trocas": 0,
+      "frames_vistos": 2517
+    },
+    "goleiro_time1": {
+      "jogadores": 1,
+      "cobertura_media": 0.9909255898366606,
+      "presenca_media": 0.5454545454545454,
+      "trocas": 0,
+      "frames_vistos": 546
+    }
+  },
+  "bola": {
+    "frames_vistos_bola": 590,
+    "presenca_bola": 0.5894,
+    "num_perdas_bola": 81,
+    "maior_falha_frames": 64,
+    "confianca_media_bola": 0.5393
+  },
+  "diagnostico": {
+    "frames_com_jogadores": 1000,
+    "frames_com_bola": 590,
+    "deteccoes_jogadores": 5614,
+    "deteccoes_bola": 781,
+    "novos_tracks": 0,
+    "novos_tracks_classificados": 0,
+    "tempo_deteccao_jogadores": 341.2148645000634,
+    "tempo_deteccao_bola": 337.0304078999907,
+    "tempo_aparencia": 17.93342560000019,
+    "tempo_associacao": 9.5682452998808,
+    "tempo_total_loop": 727.7155396000089
+  },
+  "confiabilidade_time": {
+    "margem_media_geral": 0.1162,
+    "taxa_confirmacao_media": 0.9837,
+    "taxa_divergencia_media": 0.0
+  }
+}

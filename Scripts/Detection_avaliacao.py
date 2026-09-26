@@ -21,10 +21,12 @@ import supervision as sv
 from ultralytics import YOLO
 from ultralytics import RTDETR
 
+
+
 # ============================================================
 # CONFIGURAÇÃO GERAL
 # ============================================================
-VIDEO_PATH = r"E:\Projeto\Videos\Jogo_Aranha-05-09-26.mp4"
+VIDEO_PATH = r"E:\Projeto\Videos\Video_teste.mp4"
 OUTPUT_DIR = r"E:\Projeto\Videos\Saidas"
 CSV_DIR    = r"E:\Projeto\CSV"
 HTML_DIR   = r"E:\Projeto\HTML"
@@ -36,7 +38,7 @@ FRAME_REFERENCIA = 0
 # Ajustados pelo notebook quando houver GPU disponível.
 HALF_INFERENCIA = False
 # Use um número para validar um clipe curto; None processa até o fim.
-MAX_FRAMES_PROCESSAMENTO = None
+MAX_FRAMES_PROCESSAMENTO = 1000
 
 CONFIANCA_JOGADOR = 0.25
 CONFIANCA_BOLA    = 0.12
@@ -49,7 +51,7 @@ INTERVALO_APARENCIA = 3
 MAX_HIST_TRACK       = 20
 MINIMO_VOTOS_TIME    = 3
 MARGEM_MINIMA_TIME   = 0.06
-PERMITIR_TROCA_TIME  = False
+PERMITIR_TROCA_TIME  = True
 MATCH_SCORE_MIN      = 0.18
 MATCH_IOU_MIN        = 0.05
 MATCH_DISTANCIA_MAX  = 0.22
@@ -68,13 +70,13 @@ BALL_MAX_JUMP_NORMALIZADO = 0.12
 SALVAR_CSV_DETECCOES = True
 SALVAR_CSV_RESUMO    = True
 SALVAR_JSON_METRICAS = True
-SALVAR_VIDEO = False
+SALVAR_VIDEO = True
 # Preview ao vivo: "local" usa cv2.imshow; "colab" atualiza a célula inline.
 EXIBIR_PREVIEW = True
 PREVIEW_MODO = "local"
 PREVIEW_INTERVALO = 1
 
-MODELO_YOLO = r"E:\Projeto\Modelos\yolo26m.pt"
+MODELO_YOLO = r"E:\Projeto\Modelos\yolo26s.pt"
 MODELO_RTDETR_BOLA = r"E:\Projeto\Modelos\rtdetr-l.pt"
 CLASSE_BOLA_RTDETR = 32
 _CACHE_RTDETR_BOLA = {}
@@ -123,39 +125,41 @@ def rotulo_grupo(role_id: str | None) -> tuple[str, str, bool]:
 # ============================================================
 TESTES = [
     # ------ Selecionados
+    # Classe _best -> {"player": 2, "ball": 0, "goalkeeper": 1, "referee": 3}
+    # classe geral -> {"player": 0, "ball": 32, "goalkeeper": None, "referee": set()}
+    {
+        "nome_teste": "YOLO26S_BoTSORT_HSV_1280",
+        "detector":   "yolo",
+        "model_path": MODELO_YOLO,
+        "rtdetr_bola_model_path": MODELO_RTDETR_BOLA,
+        "imgsz":      1280,
+        "tracker":    "botsort",
+        "aparencia":  "hsv",
+        "usar_rtdetr_bola": RTDTER_BOLA,
+        "classes": {"player": 0, "ball": 32, "goalkeeper": None, "referee": set()},
+    },
     # {
-    #     "nome_teste": "YOLO26S_BoTSORT_HSV_1280__RTDETR_Bola",
-    #     "detector":   "yolo",
+    #     "nome_teste": "YOLO26M_NorFair_HSV_1280", 
+    #     "detector": "yolo",
     #     "model_path": MODELO_YOLO,
-    #     "rtdetr_bola_model_path": MODELO_RTDETR_BOLA,
-    #     "imgsz":      1280,
-    #     "tracker":    "botsort",
-    #     "aparencia":  "hsv",
+    #     "rtdetr_bola_model_path": MODELO_RTDETR_BOLA, 
+    #     "imgsz": 1280,
+    #     "tracker": "norfair", 
+    #     "aparencia": "hsv",
     #     "usar_rtdetr_bola": RTDTER_BOLA,
     #     "classes": {"player": 0, "ball": 32, "goalkeeper": None, "referee": set()},
     # },
-    {
-        "nome_teste": "YOLO26M_BOTSORT_HSV_1280", 
-        "detector": "yolo",
-        "model_path": MODELO_YOLO,
-        "rtdetr_bola_model_path": MODELO_RTDETR_BOLA, 
-        "imgsz": 1280,
-        "tracker": "botsort", 
-        "aparencia": "hsv",
-        "usar_rtdetr_bola": RTDTER_BOLA,
-        "classes": {"player": 0, "ball": 32, "goalkeeper": None, "referee": set()},
-    },
-    {
-        "nome_teste": "YOLO26M_BOTSORT_Siames_1280", 
-        "detector": "yolo",
-        "model_path": MODELO_YOLO,
-        "rtdetr_bola_model_path": MODELO_RTDETR_BOLA, 
-        "imgsz": 1280,
-        "tracker": "botsort", 
-        "aparencia": "siames",
-        "usar_rtdetr_bola": RTDTER_BOLA,
-        "classes": {"player": 0, "ball": 32, "goalkeeper": None, "referee": set()},
-    },
+    # {
+    #     "nome_teste": "YOLO26M_NorFair_Siames_1280", 
+    #     "detector": "yolo",
+    #     "model_path": MODELO_YOLO,
+    #     "rtdetr_bola_model_path": MODELO_RTDETR_BOLA, 
+    #     "imgsz": 1280,
+    #     "tracker": "norfair", 
+    #     "aparencia": "siames",
+    #     "usar_rtdetr_bola": RTDTER_BOLA,
+    #     "classes": {"player": 0, "ball": 32, "goalkeeper": None, "referee": set()},
+    # },
     
 ]
 
@@ -239,6 +243,7 @@ def imprimir_progresso(nome, frame, total, processados, inicio, extra=""):
     eta = int(max(0, total - frame) / vel) if vel > 0 else 0
     print(f"[{nome}] {100*frame/max(1,total):6.2f}% | frame {frame}/{total} | "
           f"{vel:.2f} FPS | ETA {eta//60}m{eta%60:02d}s | {extra}", flush=True)
+
 
 
 # ============================================================
@@ -1671,41 +1676,28 @@ def executar_teste(config, refs, frame_referencia):
             if frame_num % max(1, PULAR_FRAMES) != 0:
                 continue
             processados += 1
-            if MAX_FRAMES_PROCESSAMENTO is not None and processados > MAX_FRAMES_PROCESSAMENTO:
-                break
 
             t_loop = perf_counter()
-            jogadores, bola = detectar_e_trackear(
-                detector_jogadores=detector,
-                detector_bola_rtdetr=detector_bola_rtdetr,
-                tracker_info=tracker_info,
-                config=config,
-                frame=frame,
-                largura=largura,
-                altura=altura,
-                diagnostico=diagnostico,
-            )
-            if len(jogadores):
-                diagnostico["frames_com_jogadores"] += 1
-                diagnostico["deteccoes_jogadores"] += len(jogadores)
+            
+            jogadores, bola = detectar_e_trackear(detector, detector_bola_rtdetr, tracker_info, config, frame, largura, altura)
+
             if len(bola) > 0:
                 bola = bola[bola.confidence >= CONFIANCA_BOLA]
                 if len(bola) > 0:
                     bola = bola.with_nms(threshold=NMS_BOLA, class_agnostic=True)
-            bola_visivel = len(bola) > 0
-            bola = atualizar_estado_bola(bola, estado_bola, frame_num)
-            if bola_visivel:
-                diagnostico["frames_com_bola"] += 1
-                diagnostico["deteccoes_bola"] += len(bola)
+            atualizar_estado_bola(bola, estado_bola, frame_num)
 
-            t_app = perf_counter()
-            if len(jogadores) and config["aparencia"] != "none" and frame_num % max(1, INTERVALO_APARENCIA) == 0:
+            # ── Classificação de aparência para TODO jogador rastreado ──────
+            # (não só os que bateram com uma referência clicada)
+            role_por_tracker_id = {}
+            if len(jogadores) and config["aparencia"] != "none":
                 crops, tids = [], []
                 for tid, box in zip(jogadores.tracker_id, jogadores.xyxy):
                     crop = crop_torso(frame, box)
                     if crop is not None:
                         crops.append(crop)
                         tids.append(int(tid))
+
                 if config["aparencia"] in _EXTRATORES_NEURAIS and extrator is not None:
                     embeddings = extrator.extrair(crops) if crops else []
                     for tid, emb in zip(tids, embeddings):
@@ -1713,40 +1705,16 @@ def executar_teste(config, refs, frame_referencia):
                 else:
                     for tid, crop in zip(tids, crops):
                         classificador.adicionar(tid, assinatura_hsv(crop))
-            diagnostico["tempo_aparencia"] += perf_counter() - t_app
 
-            t_assoc = perf_counter()
-            pares = associar_tracks(
-                jogadores, refs, estado, largura, altura, frame_num,
-                classificador=classificador,
-            ) if len(jogadores) else []
-            diagnostico["tempo_associacao"] += perf_counter() - t_assoc
-            pares_tids = {p[0] for p in pares}
-            tids_presentes = getattr(jogadores, "tracker_id", None)
-            if tids_presentes is None:
-                tids_presentes = []
-            for tid in tids_presentes:
-                tid = int(tid)
-                if tid not in pares_tids:
-                    if tid not in tracks_novos_contados:
-                        tracks_novos_contados.add(tid)
-                        diagnostico["novos_tracks"] += 1
-                    pred_novo, margem_novo = classificador.prever(tid)
-                    role_novo = classificador.atualizar(tid, pred_novo)
-                    if role_novo is not None:
-                        roles_por_track[tid] = role_novo
-                        diagnostico["novos_tracks_classificados"] += 1
-                        linhas.append({
-                            "frame": frame_num, "logical_id": "novo",
-                            "tracker_id": tid, "papel": role_novo,
-                            "rotulo": rotulo_grupo(role_novo)[0],
-                            "grupo_metrica": rotulo_grupo(role_novo)[1],
-                            "excluido": rotulo_grupo(role_novo)[2],
-                            "score": 0.0, "iou": 0.0, "distancia": 0.0,
-                            "novo_track": True, "margem_aparencia": float(margem_novo),
-                        })
+                # Aplica o classificador em TODOS os tracker_ids do frame, não só nos pares
+                for tid in jogadores.tracker_id:
+                    pred_role, margem = classificador.prever(int(tid))
+                    role_final = classificador.atualizar(int(tid), pred_role)
+                    role_por_tracker_id[int(tid)] = (role_final, margem)
 
-            for tid, lid, score, iou, dist, box, score_app, score_role in pares:
+            pares = associar_tracks(jogadores, refs, estado, largura, altura, frame_num) if len(jogadores) else []
+
+            for tid, lid, score, iou, dist, box, score_app, score_role in pares:   
                 info = estado[lid]
                 if info["primeiro_frame"] is None:
                     info["primeiro_frame"] = frame_num
@@ -1756,8 +1724,8 @@ def executar_teste(config, refs, frame_referencia):
                 registrar_id(info, tid, frame_num)
                 finalizar_presenca(info, frame_num)
 
-                pred_role, margem = classificador.prever(tid)
-                role_final = classificador.atualizar(tid, pred_role)
+                # Usa a classificação já calculada acima para TODOS, não recalcula aqui
+                role_final, margem = role_por_tracker_id.get(int(tid), (None, 0.0))
                 classificacao_confirmada = role_final is not None
                 if role_final is None:
                     role_final = refs[lid]["role_id"]
@@ -1765,18 +1733,31 @@ def executar_teste(config, refs, frame_referencia):
                 info["margens_classificacao"].append(float(margem))
                 if classificacao_confirmada:
                     info["frames_confirmados"] += 1
-
-                divergiu = classificacao_confirmada and role_final != refs[lid]["role_id"]
-                if divergiu:
+                if classificacao_confirmada and role_final != refs[lid]["role_id"]:
                     info["frames_divergentes"] += 1
 
                 rotulo, grupo, excluido = rotulo_grupo(role_final)
-
                 linhas.append({
                     "frame": frame_num, "logical_id": lid, "tracker_id": tid,
                     "papel": role_final, "rotulo": rotulo, "grupo_metrica": grupo,
                     "excluido": excluido, "score": score, "iou": iou, "distancia": dist,
-                    "score_aparencia": score_app, "score_papel": score_role,
+                })
+
+            # ── NOVO: registra também jogadores SEM referência (não clicados) ──
+            # Isso captura quem entra depois no vídeo, sem logical_id fixo
+            tids_com_par = {p[0] for p in pares}
+            for tid in jogadores.tracker_id:
+                tid_int = int(tid)
+                if tid_int in tids_com_par:
+                    continue  # já registrado acima via pares
+                role_final, margem = role_por_tracker_id.get(tid_int, (None, 0.0))
+                if role_final is None:
+                    continue  # ainda sem classificação confiável — não registra
+                rotulo, grupo, excluido = rotulo_grupo(role_final)
+                linhas.append({
+                    "frame": frame_num, "logical_id": None, "tracker_id": tid_int,
+                    "papel": role_final, "rotulo": rotulo, "grupo_metrica": grupo,
+                    "excluido": excluido, "score": None, "iou": None, "distancia": None,
                 })
 
             # ── Vídeo anotado e preview ao vivo ─────────────────────────
@@ -1785,24 +1766,36 @@ def executar_teste(config, refs, frame_referencia):
                 and frame_num % max(1, PULAR_FRAMES) == 0
             )
             if deve_anotar:
-                if pares:
-                    xyxy_anotar = np.array([p[5] for p in pares], dtype=np.float32)
-                    tids_anotar = np.array([p[0] for p in pares], dtype=int)
+                if len(jogadores) > 0:
+                    xyxy_anotar, tids_anotar, classes_anotar, labels_anotar = [], [], [], []
 
-                    papel_por_lid = {}
-                    for linha_log in linhas[-len(pares):]:
-                        papel_por_lid[linha_log["logical_id"]] = linha_log
+                    # Monta um mapa rápido: tracker_id -> info de quem já tem par (referência clicada)
+                    info_por_tid = {}
+                    for linha_log in linhas:
+                        if linha_log["frame"] == frame_num:
+                            info_por_tid[linha_log["tracker_id"]] = linha_log
 
-                    classes_anotar, labels_anotar = [], []
-                    for tid, lid, score, iou, dist, box, score_app, score_role in pares:
-                        info_linha = papel_por_lid.get(lid, {})
-                        role_final_v = info_linha.get("papel", refs[lid]["role_id"])
-                        classes_anotar.append(cor_index_por_papel(role_final_v))
-                        labels_anotar.append(f"#{tid} {info_linha.get('rotulo', '?')}")
+                    for tid, box in zip(jogadores.tracker_id, jogadores.xyxy):
+                        tid_int = int(tid)
+                        info_linha = info_por_tid.get(tid_int)
+
+                        if info_linha is not None:
+                            role_final_v = info_linha["papel"]
+                            rotulo_v = info_linha["rotulo"]
+                        else:
+                            # Ainda sem classificação confirmada — mostra mesmo assim,
+                            # com rótulo neutro, para você ver que já está sendo detectado
+                            role_final_v, _ = role_por_tracker_id.get(tid_int, (None, 0.0))
+                            rotulo_v = rotulo_grupo(role_final_v)[0] if role_final_v else "?"
+
+                        xyxy_anotar.append(box)
+                        tids_anotar.append(tid_int)
+                        classes_anotar.append(cor_index_por_papel(role_final_v) if role_final_v else 5)
+                        labels_anotar.append(f"#{tid_int} {rotulo_v}")
 
                     det_anotar = sv.Detections(
-                        xyxy=xyxy_anotar,
-                        tracker_id=tids_anotar,
+                        xyxy=np.array(xyxy_anotar, dtype=np.float32),
+                        tracker_id=np.array(tids_anotar, dtype=int),
                         class_id=np.array(classes_anotar, dtype=int),
                     )
 
@@ -1821,20 +1814,11 @@ def executar_teste(config, refs, frame_referencia):
                     out_video.write(frame_anotado)
 
                 if EXIBIR_PREVIEW and frame_num % max(1, PREVIEW_INTERVALO) == 0:
-                    if PREVIEW_MODO == "colab":
-                        # Atualização inline; não usa cv2.imshow, que não funciona
-                        # corretamente no runtime hospedado do Colab.
-                        from IPython.display import Image, clear_output, display
-                        ok_jpg, buffer = cv2.imencode(".jpg", frame_anotado, [cv2.IMWRITE_JPEG_QUALITY, 80])
-                        if ok_jpg:
-                            clear_output(wait=True)
-                            display(Image(data=buffer.tobytes()))
-                    else:
-                        cv2.imshow(f"Tracking — {nome}", frame_anotado)
-                        tecla = cv2.waitKey(1) & 0xFF
-                        if tecla in (ord("q"), 27):
-                            print("Preview interrompido pelo usuário.")
-                            break
+                    cv2.imshow(f"Tracking — {nome}", frame_anotado)
+                    tecla = cv2.waitKey(1) & 0xFF
+                    if tecla in (ord("q"), 27):
+                        print("Preview interrompido pelo usuário.")
+                        break
 
             diagnostico["tempo_total_loop"] += perf_counter() - t_loop
             if frame_num >= proximo_log:
@@ -2001,6 +1985,8 @@ document.addEventListener('DOMContentLoaded', () => {{
 # ============================================================
 # MAIN
 # ============================================================
+
+
 def main():
     criar_pastas()
     if not TESTES:

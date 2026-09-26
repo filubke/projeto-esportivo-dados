@@ -76,17 +76,19 @@ document.addEventListener('DOMContentLoaded', () => {
 </tr>
 </thead>
 <tbody>
-<tr class='main-row'><td><b>YOLO26S_BoTSORT_HSV_1280</b></td><td>1280</td><td>yolo</td><td>botsort</td><td>yolo26s.pt</td><td>hsv</td><td>1.50</td><td>97.96%</td><td>3</td><td>175.33333333333334</td><td>51.3%</td><td>96.5%</td><td>26.3%</td><td><button onclick="toggle('det_0')">Detalhes</button></td></tr><tr id='det_0' class='detail-row' style='display:none'><td colspan='14'><pre>{
+<tr class='main-row'><td><b>YOLO26S_BoTSORT_HSV_1280</b></td><td>1280</td><td>yolo</td><td>botsort</td><td>yolo26s.pt</td><td>hsv</td><td>1.28</td><td>97.96%</td><td>3</td><td>175.33333333333334</td><td>51.3%</td><td>93.7%</td><td>30.4%</td><td><button onclick="toggle('det_0')">Detalhes</button></td></tr><tr id='det_0' class='detail-row' style='display:none'><td colspan='14'><pre>{
   &quot;nome_teste&quot;: &quot;YOLO26S_BoTSORT_HSV_1280&quot;,
   &quot;detector&quot;: &quot;yolo&quot;,
   &quot;modelo_usado&quot;: &quot;yolo26s.pt&quot;,
   &quot;tracker&quot;: &quot;botsort&quot;,
   &quot;aparencia&quot;: &quot;hsv&quot;,
+  &quot;rtdetr_bola&quot;: false,
+  &quot;modelo_bola_usado&quot;: &quot;rtdetr-l.pt&quot;,
   &quot;imgsz_config&quot;: 1280,
   &quot;imgsz&quot;: 1280,
-  &quot;fps_processamento&quot;: 1.4956646097079835,
+  &quot;fps_processamento&quot;: 1.2781006696198094,
   &quot;media_cobertura&quot;: 0.9795585465794898,
-  &quot;media_presenca&quot;: 0.7456273764258555,
+  &quot;media_presenca&quot;: 0.7456273764258556,
   &quot;total_trocas_tracker_id&quot;: 3,
   &quot;frames_por_troca_global&quot;: 175.33333333333334,
   &quot;trocas_por_1000_frames_global&quot;: 5.7034220532319395,
@@ -120,10 +122,23 @@ document.addEventListener('DOMContentLoaded', () => {
     &quot;maior_falha_frames&quot;: 61,
     &quot;confianca_media_bola&quot;: 0.4721
   },
+  &quot;diagnostico&quot;: {
+    &quot;frames_com_jogadores&quot;: 0,
+    &quot;frames_com_bola&quot;: 0,
+    &quot;deteccoes_jogadores&quot;: 0,
+    &quot;deteccoes_bola&quot;: 0,
+    &quot;novos_tracks&quot;: 0,
+    &quot;novos_tracks_classificados&quot;: 0,
+    &quot;tempo_deteccao_jogadores&quot;: 0.0,
+    &quot;tempo_deteccao_bola&quot;: 0.0,
+    &quot;tempo_aparencia&quot;: 0.0,
+    &quot;tempo_associacao&quot;: 0.0,
+    &quot;tempo_total_loop&quot;: 410.77479819988366
+  },
   &quot;confiabilidade_time&quot;: {
-    &quot;margem_media_geral&quot;: 0.1488,
-    &quot;taxa_confirmacao_media&quot;: 0.9648,
-    &quot;taxa_divergencia_media&quot;: 0.2628
+    &quot;margem_media_geral&quot;: 0.1484,
+    &quot;taxa_confirmacao_media&quot;: 0.9367,
+    &quot;taxa_divergencia_media&quot;: 0.3042
   }
 }</pre></td></tr><tr class='main-row'><td><b>YOLO26S_BoTSORT_KMeansHSV_1280</b></td><td>1280</td><td>yolo</td><td>botsort</td><td>yolo26s.pt</td><td>kmeans_hsv</td><td>1.52</td><td>97.96%</td><td>3</td><td>175.33333333333334</td><td>51.3%</td><td>84.4%</td><td>14.6%</td><td><button onclick="toggle('det_1')">Detalhes</button></td></tr><tr id='det_1' class='detail-row' style='display:none'><td colspan='14'><pre>{
   &quot;nome_teste&quot;: &quot;YOLO26S_BoTSORT_KMeansHSV_1280&quot;,
